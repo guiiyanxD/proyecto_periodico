@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folleto Resumen Ecológico Costa Rica - Colegio Británico de Bolivia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
+    :root {
+      --primary: #12372A;
+      --primary-light: #2D6A4F;
+      --accent: #D4A373;
+      --accent-dark: #A06D3B;
+      --emerald: #40916C;
+      --mint: #D8F3DC;
+      --cream: #FAF8F2;
+      --paper: #FFFFFF;
+      --dark-text: #1A1F1D;
+      --border: #D1D5DB;
+      --border-card: #DCE5DF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background: var(--mint);
+      color: var(--primary);
+    }
+
+    body {
+      background-color: #4A4E51;
+      font-family: 'Lora', Georgia, serif;
+      color: var(--dark-text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+      }
+      .spread {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        break-after: page;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    .spread {
+      width: 297mm;
+      height: 210mm;
+      margin: 15mm auto;
+      background: var(--cream);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel {
+      padding: 8.5mm 9mm 8.5mm 9mm;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-right: 1px dashed rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .panel:last-child {
+      border-right: none;
+    }
+
+    h1, h2 {
+      font-family: 'Cinzel', serif;
+      line-height: 1.15;
+    }
+
+    p {
+      font-size: 7.2pt;
+      line-height: 1.35;
+      margin-bottom: 7px;
+      color: #2b2b2b;
+      text-align: justify;
+    }
+
+    .panel-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    .panel-header h2 {
+      font-size: 10.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.8pt;
+      font-weight: 700;
+      padding: 1.5px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Clean feature items without side-tab */
+    .feature-item {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 6px 8px;
+      margin-bottom: 7px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .feature-item-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .feature-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--mint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-title {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 800;
+      font-size: 7.5pt;
+      color: var(--primary);
+      line-height: 1.15;
+    }
+
+    .feature-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 6.5pt;
+      color: #666;
+      display: block;
+    }
+
+    .feature-item p {
+      font-size: 6.8pt;
+      margin-bottom: 0;
+      line-height: 1.24;
+      color: #333;
+    }
+
+    /* Cover Styling */
+    .cover-panel {
+      background: linear-gradient(175deg, #0e2a20 0%, #153e2d 40%, #1e4d38 100%);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: none;
+      padding: 8.5mm 9mm 8.5mm 9mm;
+    }
+
+    .cover-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cover-school {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .cover-fest {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 600;
+      color: #D8F3DC;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(216,243,220,0.3);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
+    .flag-box {
+      margin: 8px 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+      border-radius: 4px;
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .cover-title {
+      font-family: 'Cinzel', serif;
+      font-size: 25pt;
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin: 6px 0 3px 0;
+      color: #FFF;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .cover-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 8pt;
+      color: #D8F3DC;
+      margin-bottom: 8px;
+      padding: 0 4px;
+      line-height: 1.25;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+      margin: 6px 0 10px 0;
+    }
+
+    .cover-tag-item {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.6pt;
+      font-weight: 700;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #FFF;
+      padding: 2px 5px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Cover Showcase Box with proper padding */
+    .cover-showcase {
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(216,243,220,0.3);
+      border-radius: 5px;
+      padding: 8px 10px;
+      margin: 8px 0;
+      text-align: left;
+    }
+
+    .cover-showcase-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.8pt;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+
+    .cover-stat-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed rgba(255,255,255,0.18);
+      padding: 4px 6px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-stat-row:last-child {
+      border-bottom: none;
+    }
+
+    .cover-stat-row span.label {
+      color: #D8F3DC;
+    }
+
+    .cover-stat-row span.val {
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .cover-seal {
+      margin: 10px auto 6px auto;
+      text-align: center;
+    }
+
+    .cover-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 6.6pt;
+      color: #FAEDCD;
+      text-align: center;
+      line-height: 1.25;
+      margin: 8px 0;
+      padding: 0 4px;
+    }
+
+    .cover-footer {
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 6px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      color: #D8F3DC;
+      line-height: 1.25;
+    }
+
+    .cover-footer strong {
+      color: #FFF;
+      display: block;
+      font-size: 6.8pt;
+    }
+
+    /* Back Panel */
+    .catie-box-summary {
+      background: #F0FDF4;
+      border: 1px solid var(--emerald);
+      border-radius: 5px;
+      padding: 7px 9px;
+      margin-bottom: 8px;
+    }
+
+    .catie-box-summary h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .catie-box-summary p {
+      font-size: 6.8pt;
+      margin: 0;
+      line-height: 1.22;
+      color: #1F2937;
+    }
+
+    .web-sources-summary {
+      background: #FAF5EF;
+      border: 1px solid #E2D9CC;
+      border-radius: 4px;
+      padding: 6px 8px;
+      margin-top: 8px;
+    }
+
+    .web-sources-summary h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.6pt;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .source-bullet {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      color: #444;
+      margin-bottom: 2px;
+      line-height: 1.15;
+    }
+
+    .source-bullet strong {
+      color: var(--primary);
+    }
+
+    /* Map Graphic Styling */
+    .map-container {
+      background: #E8F4F8;
+      border: 1px solid #BEE1ED;
+      border-radius: 5px;
+      padding: 5px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .map-caption {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      color: #0369A1;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    /* Clean Ecotips list on Panel 6 without side-tab */
+    .ecotip-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 5px 7px;
+      margin-bottom: 6px;
+    }
+
+    .ecotip-card h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+      line-height: 1.15;
+    }
+
+    .ecotip-card p {
+      font-size: 6.5pt;
+      margin: 0;
+      line-height: 1.18;
+      color: #444;
+    }
+
+    .callout-pill {
+      background: var(--mint);
+      border: 1px solid var(--emerald);
+      color: var(--primary);
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SPREAD 1 (CARA EXTERIOR):
+       Panel 1 (Izquierda): Solapa con Mapa Ecológico de Costa Rica
+       Panel 2 (Centro): Contraportada con CATIE, Datos & Fuentes Web
+       Panel 3 (Derecha): Portada del Tríptico con Bandera y Festival
+       ======================================================== -->
+  <div class="spread">
+    
+    <!-- PANEL 1 (SOLAPA INTERIOR): MAPA Y REGIONES ECOLÓGICAS -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>MAPA ECOLÓGICO DE COSTA RICA</h2>
+      </div>
+
+      <p style="font-size:7.2pt; margin-bottom:5px;">
+        Con 51,100 km² de territorio terrestre, Costa Rica está dividida en dos vertientes oceánicas unidas por un espinazo volcánico:
+      </p>
+
+      <div class="map-container">
+        <svg role="img" aria-label="Mapa cartográfico esquemático de Costa Rica y sus áreas de conservación" viewBox="0 0 320 200" width="100%" height="118" style="display:block; margin:0 auto;">
+          <rect width="320" height="200" fill="#E0F2FE" rx="4"/>
+          <text x="18" y="22" font-family="Work Sans" font-size="7" font-weight="700" fill="#0284C7" letter-spacing="0.5">OCÉANO PACÍFICO</text>
+          <text x="215" y="34" font-family="Work Sans" font-size="7" font-weight="700" fill="#0284C7" letter-spacing="0.5">MAR CARIBE</text>
+
+          <path d="M 60,35 
+                   C 80,30 110,40 140,45 
+                   C 170,50 200,45 235,65 
+                   C 260,80 275,110 270,135 
+                   C 260,150 230,155 210,165 
+                   C 195,175 180,185 165,190 
+                   C 155,195 145,175 130,160 
+                   C 120,150 100,140 90,125 
+                   C 75,115 50,110 40,85 
+                   C 35,70 45,50 60,35 Z" 
+                fill="#40916C" stroke="#12372A" stroke-width="1.5"/>
+
+          <path d="M 50,75 C 30,90 25,115 45,130 C 60,120 70,95 50,75 Z" fill="#2D6A4F" stroke="#12372A" stroke-width="1.2"/>
+          <path d="M 160,175 C 150,190 165,205 180,195 C 185,185 175,175 160,175 Z" fill="#1B4332" stroke="#12372A" stroke-width="1.2"/>
+          <path d="M 75,55 Q 140,85 200,135" fill="none" stroke="#D4A373" stroke-width="3" stroke-dasharray="3,2"/>
+          
+          <circle cx="115" cy="70" r="3.5" fill="#CE1126" stroke="#FFF" stroke-width="1"/>
+          <text x="122" y="73" font-family="Work Sans" font-size="6.5" font-weight="700" fill="#12372A">V. Arenal</text>
+
+          <circle cx="145" cy="85" r="3.5" fill="#CE1126" stroke="#FFF" stroke-width="1"/>
+          <text x="152" y="87" font-family="Work Sans" font-size="6.5" font-weight="700" fill="#12372A">V. Poás / Central</text>
+
+          <circle cx="170" cy="100" r="4" fill="#EAB308" stroke="#12372A" stroke-width="1"/>
+          <text x="177" y="103" font-family="Work Sans" font-size="6.5" font-weight="800" fill="#B45309">CATIE (Turrialba)</text>
+
+          <circle cx="215" cy="65" r="3.5" fill="#0284C7" stroke="#FFF" stroke-width="1"/>
+          <text x="222" y="68" font-family="Work Sans" font-size="6.5" font-weight="700" fill="#0284C7">Tortuguero</text>
+
+          <circle cx="120" cy="135" r="3.5" fill="#0284C7" stroke="#FFF" stroke-width="1"/>
+          <text x="50" y="145" font-family="Work Sans" font-size="6.5" font-weight="700" fill="#0284C7">P.N. Manuel Antonio</text>
+
+          <circle cx="168" cy="188" r="3.5" fill="#1B4332" stroke="#FFF" stroke-width="1"/>
+          <text x="105" y="196" font-family="Work Sans" font-size="6.5" font-weight="700" fill="#1B4332">P.N. Corcovado</text>
+        </svg>
+        <div class="map-caption">Cordilleras volcánicas y áreas protegidas de conservación (SINAC)</div>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Vertiente del Caribe (Este)</h3>
+        <p>Llanuras húmedas, canales de agua dulce navegables y manglares. Cuna del desove masivo de tortugas verdes.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Vertiente del Pacífico (Oeste)</h3>
+        <p>Estación seca marcada en Guanacaste y selva hiperhúmeda virgen en la Península de Osa (Corcovado).</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Eje Cordillerano Central</h3>
+        <p>Cumbres de más de 3,000 m que albergan el bosque nuboso y capturan la humedad oceánica para alimentar los ríos.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Península de Osa & Corcovado</h3>
+        <p>Descrito por National Geographic como el rincón biológicamente más intenso del planeta; refugio clave del jaguar.</p>
+      </div>
+
+      <div class="callout-pill">
+        Más del 25% del territorio es área natural protegida
+      </div>
+    </div>
+
+    <!-- PANEL 2 (CONTRAPORTADA): CIENCIA (CATIE), DATOS Y FUENTES -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>INVESTIGACIÓN Y MODELOS SOSTENIBLES</h2>
+      </div>
+
+      <div class="catie-box-summary">
+        <h3>
+          <span>CATIE (Turrialba, Costa Rica)</span>
+          <span class="badge-pill">Desde 1973</span>
+        </h3>
+        <p>
+          El <strong>Centro Agronómico Tropical de Investigación y Enseñanza (CATIE)</strong> es el epicentro científico de América Central en agroforestería sostenible. Demuestra que cultivar café y cacao bajo sombra de árboles nativos enriquece los suelos, frena la erosión y combate el cambio climático global.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">6% de la Vida del Planeta</h3>
+        <p>Alberga más de 500,000 especies biológicas en solo el 0.03% del territorio continental mundial.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Matriz Eléctrica 98% Limpia</h3>
+        <p>Generada casi en su totalidad con hidroeléctricas, geotermia volcánica, viento y energía solar.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Monteverde: Bosque Nuboso</h3>
+        <p>Santuario de epífitas y orquídeas donde el Quetzal encuentra su alimento en los aguacatillos silvestres.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Parque Nacional Tortuguero</h3>
+        <p>El mayor santuario de anidación de la tortuga verde en el hemisferio occidental, protegido por guardaparques.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Pago por Servicios Ambientales (PSA)</h3>
+        <p>Reconocimiento económico a familias campesinas que custodian nacientes y mantienen bosques en sus fincas.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-title">Ecoturismo Comunitario Exitoso</h3>
+        <p>Comunidades locales reemplazaron la tala por el guiado científico y la educación ambiental participativa.</p>
+      </div>
+
+      <div class="web-sources-summary">
+        <h3>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Fuentes Oficiales Consultadas:
+        </h3>
+        <div class="source-bullet">&bull; <strong>CATIE:</strong> <a href="https://www.catie.ac.cr" target="_blank" rel="noopener noreferrer" aria-label="Portal de CATIE (Abre en ventana nueva)" style="color:inherit; text-decoration:underline;">www.catie.ac.cr</a> (Agroforestería y ciencia)</div>
+        <div class="source-bullet">&bull; <strong>SINAC:</strong> <a href="https://www.sinac.go.cr" target="_blank" rel="noopener noreferrer" aria-label="Portal de SINAC (Abre en ventana nueva)" style="color:inherit; text-decoration:underline;">www.sinac.go.cr</a> (Parques y conservación)</div>
+        <div class="source-bullet">&bull; <strong>UNESCO:</strong> <a href="https://www.unesco.org" target="_blank" rel="noopener noreferrer" aria-label="Portal de UNESCO Reservas de Biosfera (Abre en ventana nueva)" style="color:inherit; text-decoration:underline;">www.unesco.org</a> (Reservas de biosfera)</div>
+        <div class="source-bullet">&bull; <strong>MINAE:</strong> <a href="https://www.minae.go.cr" target="_blank" rel="noopener noreferrer" aria-label="Portal de MINAE Costa Rica (Abre en ventana nueva)" style="color:inherit; text-decoration:underline;">www.minae.go.cr</a> (Energía y ambiente)</div>
+      </div>
+
+      <div style="margin-top:2px; font-family:'Work Sans',sans-serif; font-size:5.8pt; color:#666; text-align:center;">
+        Festival Ecológico &bull; Colegio Británico de Bolivia &bull; 2026
+      </div>
+    </div>
+
+    <!-- PANEL 3 (PORTADA DEL TRÍPTICO): BANDERA Y PRESENTACIÓN -->
+    <div class="panel cover-panel">
+      <div class="cover-top">
+        <div class="cover-school">COLEGIO BRITÁNICO DE BOLIVIA</div>
+        <div class="cover-fest">FESTIVAL ECOLÓGICO ESCOLAR &bull; 03 DE NOVIEMBRE 2026</div>
+
+        <div class="flag-box">
+          <svg role="img" aria-label="Bandera oficial de la República de Costa Rica" width="135" height="81" viewBox="0 0 100 60">
+            <rect width="100" height="60" fill="#002B7F"/>
+            <rect y="10" width="100" height="40" fill="#FFFFFF"/>
+            <rect y="20" width="100" height="20" fill="#CE1126"/>
+            <ellipse cx="28" cy="30" rx="6" ry="7" fill="#FFF"/>
+            <polygon points="25,32 28,27 31,32" fill="#2D6A4F"/>
+          </svg>
+        </div>
+
+        <div style="font-family:'Work Sans',sans-serif; font-size:6.5pt; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-top:3px;">
+          REPÚBLICA DE COSTA RICA
+        </div>
+
+        <div class="cover-title">PURA VIDA</div>
+        <div class="cover-subtitle">
+          Guía Rápida de Biodiversidad, Vulcanología y Conciencia Ecológica
+        </div>
+
+        <div class="cover-tags">
+          <span class="cover-tag-item">Fauna Neotropical</span>
+          <span class="cover-tag-item">Volcanes Vivos</span>
+          <span class="cover-tag-item">Océanos Limpios</span>
+          <span class="cover-tag-item">Ciencia CATIE</span>
+        </div>
+
+        <div class="cover-showcase">
+          <div class="cover-showcase-title">Indicadores Ecológicos Modelo</div>
+          <div class="cover-stat-row">
+            <span class="label">Superficie Terrestre:</span>
+            <span class="val">51,100 km² (0.03% global)</span>
+          </div>
+          <div class="cover-stat-row">
+            <span class="label">Biodiversidad Mundial:</span>
+            <span class="val">Cerca del 6% del total</span>
+          </div>
+          <div class="cover-stat-row">
+            <span class="label">Territorio Protegido:</span>
+            <span class="val">+25% terrestre / 30% marino</span>
+          </div>
+          <div class="cover-stat-row">
+            <span class="label">Electricidad Renovable:</span>
+            <span class="val">+98% anual consecutiva</span>
+          </div>
+        </div>
+
+        <div class="cover-seal">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A373" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7C10 9.5 8 10.5 6 12C8 13.5 10 14.5 12 17C14 14.5 16 13.5 18 12C16 10.5 14 9.5 12 7Z" fill="#D4A373" fill-opacity="0.25"/>
+            <circle cx="12" cy="12" r="1.5" fill="#D4A373"/>
+          </svg>
+          <div style="font-family:'Work Sans',sans-serif; font-size:5.8pt; letter-spacing:1px; text-transform:uppercase; color:#D8F3DC; margin-top:2px;">
+            Santuario Ecológico del Neotrópico
+          </div>
+        </div>
+
+        <div class="cover-quote">
+          "Pura Vida no es solo un lema: es el compromiso cotidiano de coexistir en armonía con la naturaleza."
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        <strong>Producción Periodística y Científica</strong>
+        Investigación original y verificada para la comunidad del Colegio Británico de Bolivia.
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================
+       SPREAD 2 (CARA INTERIOR DESPLEGABLE):
+       Panel 4 (Izquierda): Volcanes Emblemáticos y Geotermia
+       Panel 5 (Centro): Fauna Símbolo y Bioindicadores
+       Panel 6 (Derecha): Consejos Ecológicos Escolares
+       ======================================================== -->
+  <div class="spread">
+
+    <!-- PANEL 4: VOLCANES Y ENERGÍA GEOTÉRMICA -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>VOLCANES EMBLEMÁTICOS</h2>
+      </div>
+
+      <p style="font-size:7.2pt; margin-bottom:5px;">
+        Costa Rica posee más de 120 focos volcánicos en tres cordilleras. Su calor subterráneo es transformado en electricidad 100% limpia sin quemar hidrocarburos:
+      </p>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FFE6D5;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#E07A5F" aria-hidden="true"><polygon points="12,4 2,20 22,20"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Volcán Arenal (1,670 m)</h3>
+            <span class="feature-subtitle">Alajuela &bull; Cono piramidal perfecto</span>
+          </div>
+        </div>
+        <p>Estratovolcán icónico. Sus aguas termales nutren un modelo ejemplar de turismo ecológico y regeneración de bosques en sus faldas.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#D8F3DC;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#2D6A4F" aria-hidden="true"><ellipse cx="12" cy="12" rx="8" ry="4"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Volcán Poás (2,708 m)</h3>
+            <span class="feature-subtitle">Cráter monumental &bull; Laguna ácida</span>
+          </div>
+        </div>
+        <p>Uno de los cráteres más anchos del mundo (1.32 km de diámetro). Su laguna turquesa es monitoreada para estudiar ecosistemas extremos.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FAEDCD;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#B07D48" aria-hidden="true"><polygon points="12,2 4,21 20,21"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Volcán Irazú (3,432 m)</h3>
+            <span class="feature-subtitle">El pico volcánico más alto</span>
+          </div>
+        </div>
+        <p>En días despejados permite divisar ambos océanos a la vez. Sus cenizas minerales fertilizan los campos agrícolas del Valle Central.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#EDF6F9;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#0077B6" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Rincón de la Vieja (1,916 m)</h3>
+            <span class="feature-subtitle">Guanacaste &bull; Geotermia viva</span>
+          </div>
+        </div>
+        <p>Fumarolas y pailas de barro hirviente que alimentan las centrales geotérmicas generadoras de electricidad limpia.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FEF3C7;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D97706" aria-hidden="true"><polygon points="12,3 2,21 22,21"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Volcán Turrialba (3,340 m)</h3>
+            <span class="feature-subtitle">Cartago &bull; Fecundidad Agrícola</span>
+          </div>
+        </div>
+        <p>Cercano a las instalaciones del CATIE; sus cenizas enriquecen los suelos donde se investigan los cultivos agroforestales.</p>
+      </div>
+
+      <div class="feature-item" style="background:#F0FDF4; border:1px solid #BBF7D0; margin-top:2px;">
+        <h3 class="feature-title" style="color:var(--primary);">Energía Geotérmica Limpia</h3>
+        <p style="font-size:6.7pt;">El vapor volcánico mueve turbinas sin emitir CO2, inyectándose de nuevo al subsuelo en un ciclo cerrado y eterno.</p>
+      </div>
+    </div>
+
+    <!-- PANEL 5: FAUNA SÍMBOLO Y BIODIVERSIDAD -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>FAUNA SÍMBOLO DE COSTA RICA</h2>
+      </div>
+
+      <p style="font-size:7.2pt; margin-bottom:5px;">
+        Criaturas que cumplen misiones fundamentales para sostener el equilibrio biológico y la salud de las cuencas selváticas:
+      </p>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#2D6A4F" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Rana de Ojos Rojos</h3>
+            <span class="feature-subtitle">Agalychnis callidryas</span>
+          </div>
+        </div>
+        <p>Bioindicador sensible: su piel permeable detecta cualquier contaminación en el agua o aire de la selva lluviosa.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FAEDCD;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#A06D3B" aria-hidden="true"><circle cx="12" cy="12" r="7"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Perezoso de Tres Dedos</h3>
+            <span class="feature-subtitle">Bradypus tridactylus &bull; Símbolo Nacional</span>
+          </div>
+        </div>
+        <p>En su pelaje crecen algas y polillas simbióticas; su lentitud ahorra energía consumiendo follaje del dosel.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#D8F3DC;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#40916C" aria-hidden="true"><polygon points="12,2 18,20 6,20"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Quetzal Resplandeciente</h3>
+            <span class="feature-subtitle">Pharomachrus mocinno &bull; Bosque Nuboso</span>
+          </div>
+        </div>
+        <p>Dispersor de semillas de aguacatillo silvestre: vuela por las cumbres reforestando de manera natural la selva nubosa.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FEF3C7;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D97706" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Jaguar Mesoamericano</h3>
+            <span class="feature-subtitle">Panthera onca &bull; Parque Corcovado</span>
+          </div>
+        </div>
+        <p>Depredador tope de la selva; regula las poblaciones de herbívoros protegiendo la vegetación de las cuencas.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#E0F2FE;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#0284C7" aria-hidden="true"><ellipse cx="12" cy="12" rx="7" ry="5"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Tortuga Verde Marina</h3>
+            <span class="feature-subtitle">Chelonia mydas &bull; P.N. Tortuguero</span>
+          </div>
+        </div>
+        <p>Viaja miles de kilómetros oceánicos para desovar en las playas del Caribe donde nació, protegida por guardaparques.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-item-header">
+          <div class="feature-icon" style="background:#FDE047;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#CA8A04" aria-hidden="true"><path d="M4 14C8 14 16 10 20 6L4 14Z"/></svg>
+          </div>
+          <div>
+            <h3 class="feature-title">Tucán Pico Iris</h3>
+            <span class="feature-subtitle">Ramphastos sulfuratus</span>
+          </div>
+        </div>
+        <p>Maestro dispersor de frutos selváticos en los pisos tropicales cálidos del Caribe y el Pacífico Central.</p>
+      </div>
+    </div>
+
+    <!-- PANEL 6: CONSEJOS ECOLÓGICOS ESCOLARES -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2>CONSEJOS ECOLÓGICOS</h2>
+      </div>
+
+      <p style="font-size:7.2pt; margin-bottom:5px;">
+        ¡Llevemos la actitud "Pura Vida" a nuestro Colegio Británico y a nuestros hogares en La Paz!
+      </p>
+
+      <div class="ecotip-card">
+        <h3>1. Adiós al Plástico Desechable</h3>
+        <p>Lleva tu tomatodo y lonchera reutilizable. Dile no a sorbetes y bolsas plásticas.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>2. Reciclaje y Separación</h3>
+        <p>Coloca papeles limpios, plásticos secos y latas en los botes de reciclaje escolar.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>3. Compostaje y Huerto Escolar</h3>
+        <p>Como enseña el CATIE, convirtamos cáscaras de fruta en abono para los jardines.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>4. Cuida Cada Gota de Agua</h3>
+        <p>Cierra la llave mientras te jabonas las manos y avisa de cualquier fuga en el colegio.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>5. Apaga y Desconecta</h3>
+        <p>Aprovecha la luz del sol; apaga monitores y focos al salir del aula de clases.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>6. Respeta la Vida Silvestre</h3>
+        <p>Protege a abejas, mariposas y colibríes en los patios y áreas verdes urbanas.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>7. Reforestación con Queñuas</h3>
+        <p>Participa en campañas para plantar árboles nativos que capturen carbono en La Paz.</p>
+      </div>
+
+      <div class="ecotip-card">
+        <h3>8. Cuida tus Materiales</h3>
+        <p>Cuida tus cuadernos y libros escolares para darles la mayor vida útil posible.</p>
+      </div>
+
+      <div class="callout-pill" style="background:var(--primary); color:white; border:none; margin-top:2px;">
+        "Pequeñas acciones multiplicadas por miles transforman el planeta."
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
