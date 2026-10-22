@@ -2,3 +2,10 @@
 *.md
 test_panel1_preview.html
 test_panel1_preview2.html
+~$*
+scratch/
+scratch_*.html
+images_preview.html
+extracted_docx/
+*.pyc
+__pycache__/

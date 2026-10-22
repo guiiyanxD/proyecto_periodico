@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periódico Ecológico PURA VIDA - Colegio Británico Santa Cruz</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --primary: #12372A;
+      --primary-light: #2D6A4F;
+      --accent: #D4A373;
+      --accent-dark: #A06D3B;
+      --emerald: #40916C;
+      --mint: #D8F3DC;
+      --cream: #FAF8F2;
+      --paper: #FCFAF6;
+      --dark-text: #1F2421;
+      --muted: #495057;
+      --border-color: #D3D3D3;
+      --border-card: #DCE6DF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background: var(--mint);
+      color: var(--primary);
+    }
+
+    body {
+      background-color: #4A4E51;
+      font-family: 'Lora', Georgia, serif;
+      color: var(--dark-text);
+      line-height: 1.45;
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+      }
+
+      .page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 15mm auto;
+      background: var(--paper);
+      padding: 12mm 16mm 14mm 16mm;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Running Header & Footer */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .page-header span.highlight {
+      background: var(--primary);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 2px;
+    }
+
+    .page-footer {
+      position: absolute;
+      bottom: 7mm;
+      left: 16mm;
+      right: 16mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #CCC;
+      padding-top: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      color: #666;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .page-footer .page-number {
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10mm;
+    }
+
+    /* Masthead - Page 1 */
+    .masthead {
+      text-align: center;
+      border-bottom: 3px double var(--primary);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .masthead-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-top: 1px solid var(--primary);
+      border-bottom: 1px solid var(--primary);
+      padding: 2.5px 0;
+      margin-bottom: 6px;
+      letter-spacing: 0.8px;
+      color: var(--primary-light);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .masthead-title {
+      font-family: 'Cinzel', serif;
+      font-size: 38pt;
+      font-weight: 900;
+      letter-spacing: 3.5px;
+      color: var(--primary);
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin: 2px 0;
+    }
+
+    .masthead-subtitle {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.2pt;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+    }
+
+    /* Headlines */
+    h1.headline {
+      font-family: 'Cinzel', serif;
+      font-size: 14pt;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--primary);
+      margin-bottom: 5px;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+
+    .subdeck {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 9.2pt;
+      color: #444;
+      text-align: center;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      line-height: 1.35;
+    }
+
+    .byline-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Grid layouts */
+    .grid-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      text-align: justify;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      text-align: justify;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 7px;
+      text-indent: 11px;
+      line-height: 1.42;
+    }
+
+    p.no-indent {
+      text-indent: 0;
+    }
+
+    .dropcap::first-letter {
+      font-family: 'Cinzel', serif;
+      float: left;
+      font-size: 38pt;
+      line-height: 0.8;
+      padding-top: 3px;
+      padding-right: 7px;
+      padding-bottom: 1px;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* Clean, non-slop Infobox without thick border-left */
+    .infobox {
+      background: #F3F8F5;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 9px 11px;
+      margin: 8px 0;
+    }
+
+    .infobox-title {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 800;
+      font-size: 7.8pt;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.4px;
+    }
+
+    .infobox p {
+      font-size: 8pt;
+      margin-bottom: 0;
+      text-indent: 0;
+      line-height: 1.32;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .quote-box {
+      border-top: 1px solid var(--accent);
+      border-bottom: 1px solid var(--accent);
+      padding: 8px 12px;
+      margin: 8px 0;
+      text-align: center;
+      font-style: italic;
+      font-size: 9pt;
+      color: var(--primary);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .quote-box span.author {
+      display: block;
+      font-family: 'Work Sans', sans-serif;
+      font-style: normal;
+      font-size: 7pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      margin-top: 3px;
+      letter-spacing: 0.4px;
+    }
+
+    /* Section Headers */
+    .section-header {
+      background: var(--primary);
+      color: white;
+      padding: 5px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 12pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    .section-header span {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    /* Cards for Species, Volcanoes, etc */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 5px;
+      padding: 8px 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .icon-avatar {
+      width: 34px;
+      height: 34px;
+      background: var(--mint);
+      border: 1px solid var(--emerald);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-card h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+    }
+
+    .feature-card span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.6pt;
+      color: #666;
+      display: block;
+    }
+
+    .feature-card p {
+      font-size: 8pt;
+      text-indent: 0;
+      line-height: 1.32;
+      margin-bottom: 3px;
+      color: #2D3142;
+    }
+
+    .feature-card .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.6pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 5px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Enhanced Visual Animal Cards for Page 2 */
+    .animal-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .animal-photo-box {
+      position: relative;
+      width: 100%;
+      height: 178px;
+      overflow: hidden;
+    }
+
+    .animal-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .animal-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .animal-body {
+      padding: 7px 9px 8px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .animal-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .animal-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .animal-body p {
+      font-size: 7.6pt;
+      text-indent: 0;
+      line-height: 1.32;
+      margin-bottom: 3px;
+      color: var(--dark-text);
+    }
+
+    .animal-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Enhanced Visual Volcano Cards for Page 3 */
+    .volcano-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .volcano-photo-box {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .volcano-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .volcano-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .volcano-body {
+      padding: 7px 9px 8px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .volcano-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .volcano-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .volcano-body p {
+      font-size: 7.5pt;
+      text-indent: 0;
+      line-height: 1.32;
+      margin-bottom: 3px;
+      color: var(--dark-text);
+    }
+
+    .volcano-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Geothermal Infographic on Page 3 */
+    .geothermal-card {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-bottom: 7px;
+    }
+
+    .geothermal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .geothermal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+      letter-spacing: 0.3px;
+    }
+
+    .geothermal-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 700;
+      background: var(--accent-dark);
+      color: white;
+      padding: 1.5px 6px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .geothermal-lead {
+      font-size: 7.5pt;
+      line-height: 1.28;
+      color: var(--dark-text);
+      margin-bottom: 5px;
+      text-indent: 0;
+    }
+
+    .geothermal-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .geothermal-step {
+      background: white;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 5px 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .geothermal-step .step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .geothermal-step .step-num {
+      background: var(--mint);
+      color: var(--primary);
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.8pt;
+      font-weight: 800;
+    }
+
+    .geothermal-step strong {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .geothermal-step p {
+      font-family: 'Lora', serif;
+      font-size: 6.8pt;
+      line-height: 1.25;
+      color: var(--muted);
+      margin: 0;
+      text-indent: 0;
+    }
+
+    /* Enhanced Visual Marine Cards for Page 4 */
+    .marine-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .marine-photo-box {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      overflow: hidden;
+    }
+
+    .marine-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .marine-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .marine-body {
+      padding: 6px 9px 7px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .marine-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .marine-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .marine-body p {
+      font-size: 7.3pt;
+      text-indent: 0;
+      line-height: 1.28;
+      margin-bottom: 2.5px;
+      color: var(--dark-text);
+    }
+
+    .marine-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Marine Infographic on Page 4 */
+    .marine-infobox {
+      background: #F4F8F7;
+      border: 1px solid #CDE0D9;
+      border-radius: 4px;
+      padding: 6px 9px;
+      margin-bottom: 6px;
+    }
+
+    .marine-infobox-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .marine-infobox-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8.2pt;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.3px;
+    }
+
+    .marine-infobox-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: white;
+      padding: 1px 5px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .marine-infobox-lead {
+      font-size: 7.2pt;
+      line-height: 1.24;
+      color: var(--dark-text);
+      margin-bottom: 4px;
+      text-indent: 0;
+    }
+
+    .marine-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .marine-step {
+      background: white;
+      border: 1px solid #D5E5DE;
+      border-radius: 3px;
+      padding: 4px 5px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .marine-step .step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1px;
+    }
+
+    .marine-step .step-num {
+      background: var(--mint);
+      color: var(--primary);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5pt;
+      font-weight: 800;
+    }
+
+    .marine-step strong {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1.5px;
+      display: block;
+    }
+
+    .marine-step p {
+      font-family: 'Lora', serif;
+      font-size: 6.5pt;
+      line-height: 1.2;
+      color: var(--muted);
+      margin: 0;
+      text-indent: 0;
+    }
+
+    /* Enhanced Visual Science Cards for Page 5 */
+    .science-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .science-photo-box {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      overflow: hidden;
+    }
+
+    .science-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .science-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .science-body {
+      padding: 6px 9px 7px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .science-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .science-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .science-body p {
+      font-size: 7.3pt;
+      text-indent: 0;
+      line-height: 1.28;
+      margin-bottom: 2.5px;
+      color: var(--dark-text);
+    }
+
+    .science-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Science & Agroforestry Infographic on Page 5 */
+    .science-infobox {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 6px 9px;
+      margin-bottom: 6px;
+    }
+
+    .science-infobox-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .science-infobox-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8.2pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+      letter-spacing: 0.3px;
+    }
+
+    .science-infobox-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      background: var(--accent-dark);
+      color: white;
+      padding: 1px 5px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .science-infobox-lead {
+      font-size: 7.2pt;
+      line-height: 1.24;
+      color: var(--dark-text);
+      margin-bottom: 4px;
+      text-indent: 0;
+    }
+
+    .science-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .science-step {
+      background: white;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 4px 5px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .science-step .step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1px;
+    }
+
+    .science-step .step-num {
+      background: var(--mint);
+      color: var(--primary);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5pt;
+      font-weight: 800;
+    }
+
+    .science-step strong {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1.5px;
+      display: block;
+    }
+
+    .science-step p {
+      font-family: 'Lora', serif;
+      font-size: 6.5pt;
+      line-height: 1.2;
+      color: var(--muted);
+      margin: 0;
+      text-indent: 0;
+    }
+
+    /* Visual Banner */
+    .visual-banner {
+      width: 100%;
+      background: linear-gradient(135deg, #12372A 0%, #2D6A4F 60%, #40916C 100%);
+      color: white;
+      border-radius: 5px;
+      padding: 10px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .visual-banner h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 13.5pt;
+      font-weight: 800;
+      margin-bottom: 2px;
+      color: #FFF;
+    }
+
+    .visual-banner p {
+      text-indent: 0;
+      font-size: 8.2pt;
+      font-family: 'Work Sans', sans-serif;
+      color: #D8F3DC;
+      max-width: 500px;
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    /* Index Box on Page 1 */
+    .index-box {
+      border: 1px solid var(--primary);
+      background: #FAF8F2;
+      padding: 8px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .index-box-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+
+    .index-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.8pt;
+      font-weight: 600;
+      padding: 2.5px 0;
+      border-bottom: 1px dashed #DDD;
+      color: #333;
+    }
+
+    .index-item span.page-ref {
+      font-weight: 800;
+      color: var(--primary);
+      background: #E8F5E9;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Decalogue list */
+    .decalogo-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
+    .decalogo-item {
+      background: white;
+      border: 1px solid var(--border-card);
+      padding: 5px 7px;
+      border-radius: 4px;
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .decalogo-num {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 9.5pt;
+      color: var(--accent-dark);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      padding-top: 1px;
+      width: 14px;
+      text-align: center;
+    }
+
+    .decalogo-text h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.3pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1px;
+      line-height: 1.15;
+    }
+
+    .decalogo-text p {
+      font-size: 6.7pt;
+      text-indent: 0;
+      line-height: 1.2;
+      color: #444;
+      margin: 0;
+    }
+
+    /* Web Resources Bar */
+    .web-resources-container {
+      background: #F4F1DE;
+      border: 1px solid var(--accent-dark);
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .web-resources-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.6pt;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .resource-card {
+      background: white;
+      padding: 5px 7px;
+      border-radius: 4px;
+      border: 1px solid #D6CEBE;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .resource-card h3 {
+      font-size: 6.9pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+      line-height: 1.15;
+    }
+
+    .resource-card p {
+      font-size: 6.3pt;
+      color: #555;
+      text-indent: 0;
+      line-height: 1.18;
+      margin-bottom: 3px;
+    }
+
+    .resource-card a {
+      font-size: 6.3pt;
+      color: var(--primary-light);
+      font-weight: 700;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    /* Parallel Action Box - Page 6 */
+    .parallel-action-container {
+      background: #FDFBF7;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .parallel-action-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #E2DBD0;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+
+    .parallel-action-title {
+      font-family: 'Cinzel', serif;
+      font-size: 8pt;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .parallel-tag {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.4pt;
+      font-weight: 700;
+      color: var(--primary);
+      background: #E8F5E9;
+      padding: 1.5px 6px;
+      border-radius: 3px;
+      border: 1px solid #C8E6C9;
+    }
+
+    .parallel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .parallel-card {
+      background: white;
+      border: 1px solid #E5DFD5;
+      border-radius: 4px;
+      padding: 5px 8px;
+    }
+
+    .parallel-card h4 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+      line-height: 1.15;
+    }
+
+    .parallel-card p {
+      font-size: 6.6pt;
+      line-height: 1.25;
+      color: #3A3A3A;
+      margin: 0;
+      text-indent: 0;
+    }
+
+    /* Colophon Box - Page 6 */
+    .colophon-container {
+      background: #F5EBE6;
+      border: 1px solid #D8C4B6;
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-top: 6px;
+    }
+
+    .colophon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .colophon-title {
+      font-family: 'Cinzel', serif;
+      font-size: 7.6pt;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 0.6px;
+    }
+
+    .colophon-date {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .colophon-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 6.9pt;
+      line-height: 1.26;
+      color: #2E4F4F;
+      margin: 3px 0 5px 0;
+      text-align: center;
+    }
+
+    .colophon-credits {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      color: #555;
+      border-top: 1px dashed #C8B6A6;
+      padding-top: 3.5px;
+    }
+
+    /* Special Highlight for CATIE with strict outline */
+    .catie-feature-box {
+      background: #F9FFF9;
+      border: 1px solid var(--emerald);
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin-bottom: 9px;
+    }
+
+    .catie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--mint);
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+
+    .catie-header h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .catie-pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 5px;
+    }
+
+    .catie-pillar {
+      background: white;
+      border: 1px solid #D8F3DC;
+      border-radius: 4px;
+      padding: 5px 6px;
+      text-align: center;
+    }
+
+    .catie-pillar h4 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+      line-height: 1.15;
+    }
+
+    .catie-pillar p {
+      font-size: 6.7pt;
+      text-indent: 0;
+      line-height: 1.18;
+      color: #555;
+      margin: 0;
+    }
+
+    /* Stamp & Institutional Box */
+    .editorial-seal {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #ECEFE6;
+      border: 1px dashed var(--primary);
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin-top: 6px;
+    }
+
+    .editorial-seal-text {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.6pt;
+      color: #333;
+      line-height: 1.2;
+    }
+
+    .editorial-seal-text strong {
+      color: var(--primary);
+    }
+
+    /* Team Credits Bar on Page 1 */
+    .team-credits-bar {
+      border-top: 1px solid var(--primary);
+      border-bottom: 1px solid var(--primary);
+      padding: 3px 0;
+      margin-bottom: 7px;
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .team-credits-bar .credits-label {
+      font-size: 6.8pt;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary);
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .team-credits-bar .credits-names {
+      font-size: 7.2pt;
+      font-weight: 600;
+      color: #2D3142;
+    }
+
+    /* Culture & Símbolos Cards for Page 4 */
+    .culture-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .culture-photo-box {
+      position: relative;
+      width: 100%;
+      height: 165px;
+      overflow: hidden;
+    }
+
+    .culture-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .culture-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .culture-body {
+      padding: 6px 9px 7px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .culture-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .culture-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .culture-body p {
+      font-size: 7.5pt;
+      text-indent: 0;
+      line-height: 1.32;
+      margin-bottom: 3px;
+      color: var(--dark-text);
+    }
+
+    .culture-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Curiosidades de Costa Rica for Page 3 */
+    .livana-hero-box {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 9px 12px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .livana-img-wrap {
+      flex: 0 0 115px;
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid #C4B9A7;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .livana-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .livana-hero-text {
+      flex: 1;
+    }
+
+    .livana-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 800;
+      color: var(--accent-dark);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .livana-hero-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 9.6pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 3px 0;
+    }
+
+    .livana-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      line-height: 1.32;
+      color: var(--dark-text);
+      margin: 0 0 4px 0;
+      text-indent: 0;
+    }
+
+    .livana-meta {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.4pt;
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .livana-meta strong {
+      color: var(--primary);
+    }
+
+    /* 5 Curious Facts Cards */
+    .curiosity-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6.5px;
+    }
+
+    .curiosity-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .curiosity-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .curiosity-title-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .curiosity-icon {
+      font-size: 11pt;
+      line-height: 1;
+    }
+
+    .curiosity-header h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .curiosity-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.8pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      border: 1px solid #C5E0D8;
+      border-radius: 3px;
+      padding: 1.5px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      flex-shrink: 0;
+    }
+
+    .curiosity-card p {
+      font-family: 'Lora', serif;
+      font-size: 7.1pt;
+      line-height: 1.34;
+      margin: 0 0 4px 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    .curiosity-impact {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.3pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: #FAF6ED;
+      border-left: 2.5px solid var(--accent);
+      padding: 2.5px 7px;
+      border-radius: 0 2px 2px 0;
+      align-self: flex-start;
+    }
+
+    /* Comparison Table on Page 6 */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      margin-bottom: 6px;
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .comparison-table th {
+      background: var(--primary);
+      color: white;
+      padding: 4px 6px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 7.2pt;
+    }
+
+    .comparison-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ECECEC;
+      vertical-align: middle;
+      line-height: 1.32;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #F9FBFA;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Passport Interactive Box on Page 6 */
+    .passport-box {
+      background: #FAF8F2;
+      border: 1.5px dashed var(--primary-light);
+      border-radius: 4px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    /* School Header on Page 1 */
+    .school-header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+      margin-bottom: 7px;
+    }
+
+    .school-logo-box {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .school-logo-box img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .school-logo-text {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Landscape Sections on Page 2 */
+    .country-landscape-section {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .country-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .country-header-flex h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .country-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      border: 1px solid #C5E0D8;
+      border-radius: 3px;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .landscape-place-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .landscape-place-card {
+      background: #FAF8F2;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .landscape-place-card img {
+      width: 100%;
+      height: 72px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      margin-bottom: 5px;
+    }
+
+    .landscape-place-card h4 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 1px 0;
+      line-height: 1.2;
+    }
+
+    .landscape-place-card span.geo-tag {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 6pt;
+      font-weight: 600;
+      color: var(--accent-dark);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .landscape-place-card p {
+      font-size: 6.4pt;
+      line-height: 1.24;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Math Analysis Box for Page 2 */
+    .math-analysis-box {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 8px 12px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .math-img-wrap {
+      flex: 0 0 215px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #C4B9A7;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .math-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .math-content-wrap {
+      flex: 1;
+    }
+
+    .math-content-wrap h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .math-metric-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .math-metric-item {
+      background: white;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 3px 5px;
+    }
+
+    .math-metric-item strong {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.4pt;
+      color: var(--primary);
+      display: block;
+    }
+
+    .math-metric-item p {
+      font-size: 6.3pt;
+      line-height: 1.2;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Comparison Grid & Cards for Page 5 */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+
+    .comparison-item-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 6px 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comparison-item-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .comparison-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .comparison-col-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .comparison-col-side img {
+      width: 100%;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 2px;
+      border: 1px solid #E5E5E5;
+      margin-bottom: 2px;
+    }
+
+    .comparison-col-side span.label {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .comparison-col-side p.val {
+      font-family: 'Lora', serif;
+      font-size: 6.2pt;
+      line-height: 1.18;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Cost of living banner on Page 5 */
+    .cost-living-banner {
+      background: #FFF9E6;
+      border: 1px solid #E5C365;
+      border-radius: 4px;
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .cost-living-banner-content {
+      flex: 1;
+    }
+
+    .cost-living-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #7A5700;
+      display: block;
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .cost-living-banner p {
+      font-size: 6.8pt;
+      line-height: 1.28;
+      margin: 0;
+      text-indent: 0;
+      color: #5A4000;
+    }
+
+    .cost-living-banner p strong {
+      display: inline;
+      font-weight: 700;
+      color: #3D2B00;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== PÁGINA 1: PORTADA & PRESENTACIÓN CONTINENTAL ==================== -->
+  <section class="page">
+    <div class="school-header-wrap">
+      <div class="school-logo-box">
+        <img src="images/docx/image1.png" alt="Escudo Oficial Colegio Británico Santa Cruz">
+        <span class="school-logo-text">Colegio Británico Santa Cruz &bull; Desde 1978</span>
+      </div>
+      <div
+        style="font-family:'Work Sans', sans-serif; font-size:6.8pt; font-weight:700; color:var(--primary-light); text-transform:uppercase; letter-spacing:0.8px;">
+        Feria Escolar de Ciencias &bull; Noviembre 2026
+      </div>
+    </div>
+
+    <div class="content-area">
+      <div class="masthead">
+        <div class="masthead-title">PURA VIDA</div>
+        <div class="masthead-subtitle">Periódico Escolar &bull; Edición Especial: PURA VIDA NOTICIAS</div>
+      </div>
+
+      <div class="team-credits-bar">
+        <span class="credits-label">INTEGRANTES:</span>
+        <span class="credits-names">Rafaela Blanco &bull; Livana Cárdenas &bull; Stefano Flores &bull; Sofia Franco
+          &bull; Keila Monserrat Montaño &bull; Farid Romero &bull; Mia Martina Sardina</span>
+      </div>
+
+      <h1 class="headline">COSTA RICA Y BOLIVIA</h1>
+      <div class="subdeck">
+        Dos naciones, una sola voz: descubriendo la geografía, la calidez de su gente y la filosofía del “¡Pura vida!”.
+      </div>
+
+      <!-- BANNER DE APERTURA: SOFIA PRESENTA PURA VIDA NOTICIAS -->
+      <div
+        style="background:white; border:1px solid var(--border-card); border-radius:5px; padding:9px 12px; margin-bottom:10px; display:flex; gap:14px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+        <div style="flex:0 0 120px; border-radius:4px; overflow:hidden; border:1px solid #E2DCD2;">
+          <img src="images/docx/image2.jpeg" alt="Portada Explorando Costa Rica: Mi viaje por la tierra de la pura vida"
+            style="width:100%; height:auto; display:block;">
+        </div>
+        <div style="flex:1;">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+            <h2 style="font-family:'Cinzel', serif; font-size:10pt; font-weight:800; color:var(--primary); margin:0;">
+              1. PRESENTACIÓN: PURA VIDA NOTICIAS
+            </h2>
+          </div>
+          <p style="font-size:7.8pt; line-height:1.34; margin-bottom:4px; color:var(--dark-text); font-style:italic;">
+            “¡Muy buenas tardes! Bienvenidos a <strong>PURA VIDA NOTICIAS</strong>. Mi nombre es Sofia y hoy quiero
+            llevarlos a conocer un poquito más de un hermoso país llamado Costa Rica 🇨🇷. Dos países diferentes, pero
+            ambos llenos de cultura, naturaleza y gente maravillosa.”
+          </p>
+          <div
+            style="font-family:'Work Sans', sans-serif; font-size:6.6pt; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.5px;">
+            Edición Escolar Especial &bull; Divulgación Pedagógica Primaria & Secundaria
+          </div>
+        </div>
+        <div style="flex:0 0 110px; border-radius:4px; overflow:hidden; border:1px solid #E2DCD2;">
+          <img src="images/docx/image3.jpeg" alt="Mapa geográfico de Costa Rica entre dos océanos"
+            style="width:100%; height:auto; display:block;">
+        </div>
+      </div>
+
+      <div class="grid-3col">
+        <div class="col">
+          <h3 style="font-family:'Cinzel', serif; font-size:8.8pt; color:var(--primary); margin-bottom:4px;">
+            Ubicación y Geografía
+          </h3>
+          <p class="dropcap no-indent" style="font-size:8pt; line-height:1.35;">
+            Costa Rica está ubicada en Centroamérica, entre Nicaragua al Norte y Panamá al Sur, y tiene costas en dos
+            grandes masas de agua: en el Océano Pacífico al Oeste y en el Mar Caribe al Este. Su capital es San José,
+            centro administrativo y cultural de la nación.
+          </p>
+          <p style="font-size:8pt; line-height:1.35;">
+            Es un territorio famoso en el mundo entero por sus hermosos paisajes, playas paradisíacas, volcanes
+            imponentes y bosques colmados de vida silvestre.
+          </p>
+        </div>
+
+        <div class="col">
+          <h3 style="font-family:'Cinzel', serif; font-size:8.8pt; color:var(--primary); margin-bottom:4px;">
+            Fauna Emblemática Inicial
+          </h3>
+          <p class="no-indent" style="font-size:8pt; line-height:1.35;">
+            Costa Rica resguarda una enorme variedad de fauna autóctona en sus selvas húmedas, entre los que destacan
+            monos, tucanes y los famosos perezosos.
+          </p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:5px 0 7px 0;">
+            <div style="display:flex; flex-direction:column; gap:2px; text-align:center;">
+              <img src="images/docx/image4.jpeg" alt="El Perezoso de Costa Rica"
+                style="width:100%; height:72px; object-fit:cover; display:block; border-radius:3px; border:1px solid #E0E0E0;">
+              <span
+                style="font-family:'Work Sans', sans-serif; font-size:6.2pt; font-weight:700; color:var(--primary); display:block;">El
+                Perezoso</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:2px; text-align:center;">
+              <img src="images/docx/image5.jpeg" alt="El Tucán de Costa Rica"
+                style="width:100%; height:72px; object-fit:cover; display:block; border-radius:3px; border:1px solid #E0E0E0;">
+              <span
+                style="font-family:'Work Sans', sans-serif; font-size:6.2pt; font-weight:700; color:var(--primary); display:block;">El
+                Tucán</span>
+            </div>
+          </div>
+          <p style="font-size:7.8pt; line-height:1.32;">
+            Estas especies habitan el dosel selvático y constituyen el corazón de los programas de conservación
+            neotropical.
+          </p>
+        </div>
+
+        <div class="col">
+          <div
+            style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px; margin-bottom:8px; display:flex; gap:8px; align-items:center;">
+            <img src="images/docx/image6.jpeg" alt="Cultura de alegría y optimismo costarricense"
+              style="width:68px; height:54px; object-fit:cover; border-radius:3px; border:1px solid #E2DCD2;">
+            <div>
+              <strong
+                style="font-family:'Work Sans', sans-serif; font-size:7pt; color:var(--primary); display:block;">“¡PURA
+                VIDA!”</strong>
+              <p style="font-size:6.6pt; line-height:1.24; margin:0; text-indent:0; color:var(--dark-text);">
+                Frase insigne que los ticos usan para saludar, agradecer o expresar alegría. De ahí surge el nombre de
+                nuestro noticiero escolar.
+              </p>
+            </div>
+          </div>
+
+          <div class="index-box" style="margin-bottom:8px; padding:8px 10px;">
+            <div class="index-box-title" style="margin-bottom:5px;">Sumario de la Edición</div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 2: Paisajes Fraternos & Matemáticas</span><span
+                class="page-ref">P. 2</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 3: Los 5 Datos Curiosos de Costa
+                Rica</span><span class="page-ref">P. 3</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 4: Símbolos, Tradición & Música</span><span
+                class="page-ref">P. 4</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 5: Cuadro Comparativo Bilateral</span><span
+                class="page-ref">P. 5</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 6: Fauna Compartida & Pasaporte</span><span
+                class="page-ref">P. 6</span></div>
+          </div>
+
+          <div class="quote-box" style="margin:0; padding:6px 10px;">
+            "La naturaleza no nos pertenece: nosotros pertenecemos a la naturaleza."
+            <span class="author">Santa Cruz, Noviembre 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">1 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 2: PAISAJES FRATERNOS & ANÁLISIS MATEMÁTICO ==================== -->
+  <section class="page">
+    <div class="page-header">
+      <span class="highlight">Sección: Paisajes Fraternos & Análisis Matemático</span>
+      <span>PURA VIDA &bull; Pág. 2</span>
+    </div>
+
+    <div class="content-area">
+      <div class="section-header" style="text-align: center;">
+        <h2>DE LOS ANDES AL CARIBE: BELLEZAS NATURALES Y ANÁLISIS MATEMÁTICO</h2>
+      </div>
+
+      <p class="dropcap no-indent">
+        Y aunque Costa Rica y Bolivia son diferentes, los dos son países de Latinoamérica con una gran riqueza cultural
+        y hermosos paisajes. Dos pueblos hermanos unidos por el continente que hoy descubrimos mediante la geografía de
+        sus territorios y la precisión del análisis matemático escolar.
+      </p>
+
+      <!-- COMPARATIVA VISUAL DE PAISAJES (DOCX) -->
+      <!-- BLOQUE 1: BOLIVIA -->
+      <div class="country-landscape-section">
+        <div class="country-header-flex">
+          <h3>🇧🇴 Bolivia: Montañas, Valles, Altiplano y Salares</h3>
+          <span class="country-badge">Sistemas Ecológicos Andinos & Llanos</span>
+
+        </div>
+        <div class="landscape-place-grid">
+          <!-- LUGAR 1: SALAR DE UYUNI -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image7.jpeg" alt="Salar de Uyuni, Potosí, Bolivia">
+            <h4>Salar de Uyuni</h4>
+            <span class="geo-tag">Potosí &bull; 3.650 m s.n.m.</span>
+            <p>El desierto de sal continuo más grande del mundo (10.582 km²). Alberga gigantescas reservas de litio y
+              crea un asombroso efecto espejo con las lluvias estacionales.</p>
+          </div>
+
+          <!-- LUGAR 2: PAISAJE ANDINO -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image8.jpeg" alt="Paisaje Andino y Cordillera Real, Bolivia">
+            <h4>Cordillera & Altiplano</h4>
+            <span class="geo-tag">Andes Centrales &bull; > 6.000 m</span>
+            <p>Imponentes nevados como el Illimani y valles glaciares que alimentan las cuencas del continente,
+              modelando la geografía y la historia de los pueblos originarios.</p>
+          </div>
+
+          <!-- LUGAR 3: EL CÓNDOR ANDINO -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image9.jpeg" alt="El Cóndor Andino en pleno vuelo, Bolivia">
+            <h4>El Cóndor Andino</h4>
+            <span class="geo-tag">Fauna Soberana &bull; Vultur gryphus</span>
+            <p>Ave insignia de los Andes que corona el Escudo Nacional de Bolivia. Simboliza la búsqueda de horizontes
+              infinitos, la fuerza y la libertad continental.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2: COSTA RICA -->
+      <div class="country-landscape-section">
+        <div class="country-header-flex">
+          <h3>🇨🇷 Costa Rica: Playas, Volcanes y Bosques</h3>
+          <span class="country-badge">Biodiversidad Tropical Interoceánica</span>
+        </div>
+        <div class="landscape-place-grid">
+          <!-- LUGAR 1: PLAYA TROPICAL -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image10.jpeg" alt="Playa Tropical de Costa Rica">
+            <h4>Playa Tropical</h4>
+            <span class="geo-tag">Costas Pacífico & Caribe</span>
+            <p>Litorales protegidos bañados por dos océanos, con arenas doradas, arrecifes de coral y cálidas aguas que
+              acogen el desove de tortugas marinas entre palmeras.</p>
+          </div>
+
+          <!-- LUGAR 2: VOLCÁN POÁS -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image11.jpeg" alt="Volcán Poás y su cráter activo, Costa Rica">
+            <h4>Volcán Poás</h4>
+            <span class="geo-tag">Alajuela &bull; 2.708 m s.n.m.</span>
+            <p>Estratovolcán activo en la Cordillera Central. Su cráter principal alcanza 1,5 km de diámetro y alberga
+              una espectacular laguna hiperácida color turquesa.</p>
+          </div>
+
+          <!-- LUGAR 3: VOLCÁN ARENAL -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image12.jpeg" alt="Volcán Arenal y bosque tropical, Costa Rica">
+            <h4>Volcán Arenal</h4>
+            <span class="geo-tag">San Carlos &bull; 1.670 m s.n.m.</span>
+            <p>Coloso de cono casi perfecto rodeado de exuberante selva pluvial y aguas termales. Es el corazón del
+              parque nacional homónimo y motor del ecoturismo tico.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 3: ANÁLISIS MATEMÁTICO DE MIA MARTINA (DOCX) -->
+      <div class="math-analysis-box">
+        <div class="math-img-wrap">
+          <img src="images/docx/image13.png"
+            alt="Infografía de Análisis Matemático: Costa Rica vs Bolivia por Mia Martina">
+        </div>
+        <div class="math-content-wrap">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+            <h3 style="margin:0;">3. ANÁLISIS MATEMÁTICO & COMPARATIVO (MIA MARTINA)</h3>
+          </div>
+          <p
+            style="font-size:7.2pt; line-height:1.26; margin:0 0 4px 0; text-indent:0; color:var(--dark-text); font-style:italic;">
+            Nuestra compañera de noticiero Martina nos brinda este estudio cuantitativo entre Costa Rica y Bolivia:
+          </p>
+          <div class="math-metric-list">
+            <div class="math-metric-item">
+              <strong>1. Superficie (Territorio):</strong>
+              <p>Costa Rica: 51.100 km² &bull; Bolivia: 1.098.580 km².<br><strong>Conclusión:</strong> Bolivia es
+                <strong>21,5 veces más grande</strong> que Costa Rica.
+              </p>
+            </div>
+            <div class="math-metric-item">
+              <strong>2. Población (aprox. 2025):</strong>
+              <p>Costa Rica: 5,15 millones de habitantes.<br>Bolivia: 12,58 millones de habitantes.<br><em>Costa Rica
+                  registra menor volumen demográfico.</em></p>
+            </div>
+            <div class="math-metric-item">
+              <strong>3. Diferencia de Hora:</strong>
+              <p>Costa Rica tiene <strong>-2 horas</strong> con respecto a Bolivia. Cuando en Santa Cruz son las 14:00,
+                en San José son las 12:00 m.</p>
+            </div>
+            <div class="math-metric-item">
+              <strong>4. Moneda y Valor de Cambio:</strong>
+              <p>Colón costarricense (CRC) vs. Boliviano (BOB).<br>El valor aproximado de <strong>1 CRC es Bs
+                  0,024</strong> (1 BOB &approx; 41,6 colones).</p>
+            </div>
+          </div>
+          <p
+            style="font-size:6.8pt; line-height:1.22; margin-top:4px; text-indent:0; color:var(--primary); font-weight:600;">
+            “Dos países diferentes, pero ambos llenos de cultura, naturaleza y gente maravillosa.” &bull; <em>PURA VIDA
+              NOTICIAS</em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">2 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 3: LOS 5 DATOS CURIOSOS DE COSTA RICA ==================== -->
+  <section class="page">
+    <div class="page-header">
+      <span class="highlight">Sección: 5 Datos Curiosos de Costa Rica</span>
+      <span>PURA VIDA &bull; Pág. 3</span>
+    </div>
+
+    <div class="content-area">
+      <div class="section-header" style="text-align: center;">
+        <h2>LOS 5 DATOS CURIOSOS DE COSTA RICA: MODELO DE VIDA Y SOSTENIBILIDAD</h2>
+      </div>
+
+      <p class="dropcap no-indent">
+        Continuando con nuestra programación especial en <strong>PURA VIDA NOTICIAS</strong>, le damos el paso a nuestra
+        compañera de equipo <strong>Livana</strong>, quien nos presenta una exhaustiva investigación escolar sobre los 5
+        datos
+        curiosos más asombrosos de Costa Rica: hitos globales en megabiodiversidad, una república sin ejército militar,
+        matriz eléctrica 100% limpia, santuarios en dos océanos y la alegría contagiosa de su pueblo.
+      </p>
+
+      <!-- CABECERA: INFOGRAFÍA OFICIAL DE LIVANA (DOCX) -->
+      <div class="livana-hero-box">
+        <div class="livana-img-wrap">
+          <img src="images/docx/image18.jpeg" alt="Infografía Oficial: 5 Datos Curiosos de Costa Rica por Livana">
+        </div>
+        <div class="livana-hero-text">
+          <div class="livana-badge">REPORTE ESPECIAL DE INVESTIGACIÓN ESCOLAR</div>
+          <h3>5. DATOS CURIOSOS DE COSTA RICA (LIVANA)</h3>
+          <p class="livana-quote">
+            “¡Muy buenas tardes! Bienvenidos a mi segmento en <strong>PURA VIDA NOTICIAS</strong>. Hoy les traigo cinco
+            datos
+            asombrosos que demuestran por qué Costa Rica es un ejemplo mundial para el cuidado del medio ambiente, la
+            paz
+            democrática y el bienestar de las personas. ¡Descubramos juntos cada uno de estos cinco pilares!”
+          </p>
+          <div class="livana-meta">
+            Investigación y Presentación: <strong>Livana Cárdenas</strong> &bull; <em>Colegio Británico Santa Cruz</em>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESARROLLO EXTENDIDO DE LOS 5 DATOS CURIOSOS -->
+      <div class="curiosity-list">
+        <!-- DATO 1 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>1. Casi el 6% de la Biodiversidad del Planeta Tierra</h3>
+            </div>
+            <span class="curiosity-badge">Ecosistemas Tropicales & SINAC</span>
+          </div>
+          <p>
+            A pesar de ocupar apenas el 0,03% de la superficie continental del planeta (51.100 km²), Costa Rica
+            resguarda cerca de <strong>500.000 especies biológicas</strong>, lo que representa aproximadamente el
+            <strong>5,8% de la biodiversidad mundial</strong>. En sus densos bosques tropicales nubosos y litorales
+            conviven más de 900 especies de aves (como el quetzal resplandeciente y el tucán pico iris), 250 clases de
+            mamíferos (monos carablanca, perezosos de dos y tres dedos, jaguares y tapires), miles de mariposas y
+            anfibios emblemáticos como la rana arbórea de ojos rojos. Más del <strong>26% de su territorio
+              nacional</strong> se encuentra permanentemente protegido bajo el Sistema Nacional de Áreas de Conservación
+            (SINAC).
+          </p>
+          <div class="curiosity-impact">
+            Densidad Biológica Mundial: Concentra más de 10 especies registradas por cada kilómetro cuadrado de selva
+            protegida.
+          </div>
+        </div>
+
+        <!-- DATO 2 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>2. Una República de Paz: Sin Ejército Militar desde 1948</h3>
+            </div>
+            <span class="curiosity-badge">Educación & Salud Universal</span>
+          </div>
+          <p>
+            El 1 de diciembre de 1948, tras concluir la guerra civil, el presidente José Figueres Ferrer derribó a
+            mazazos un muro del Cuartel Bellavista (hoy Museo Nacional) y <strong>abolió formalmente las fuerzas armadas
+              permanentes</strong>, decisión histórica ratificada en el artículo 12 de la Constitución de 1949. Los
+            recursos económicos que antes se destinaban a tanques, armamento pesado y cuarteles fueron transferidos
+            íntegramente a financiar la <strong>educación pública gratuita</strong> y el sistema de salud universal de
+            la Caja Costarricense de Seguro Social (CCSS). Costa Rica demostró que la verdadera seguridad ciudadana
+            reside en las aulas escolares y los hospitales.
+          </p>
+          <div class="curiosity-impact">
+            Inversión Cívica: Asignación presupuestaria histórica y constitucional que supera el 8% del PIB nacional
+            para educación pública.
+          </div>
+        </div>
+
+        <!-- DATO 3 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>3. Matriz Eléctrica Sostenible: Más del 98% de Energía Limpia</h3>
+            </div>
+            <span class="curiosity-badge">Energías Renovables & ICE</span>
+          </div>
+          <p>
+            Durante más de nueve años consecutivos, Costa Rica ha generado entre el <strong>98% y el 99,9% de toda su
+              electricidad</strong> utilizando fuentes limpias y renovables. Esta vanguardia de ingeniería ecológica
+            combina la fuerza del agua en centrales hidroeléctricas fluviales (cerca del 73%), el aprovechamiento del
+            calor subterráneo de los volcanes mediante <strong>energía geotérmica de circuito cerrado</strong> (14%), la
+            potencia de parques eólicos en las cordilleras (12%) y la radiación solar. Este modelo ejemplar sitúa a la
+            nación en la vanguardia del Plan Nacional de Descarbonización rumbo a una economía con cero emisiones netas.
+          </p>
+          <div class="curiosity-impact">
+            Soberanía Verde: Cero dependencia estructural de hidrocarburos para el suministro continuo de su red
+            eléctrica nacional.
+          </div>
+        </div>
+
+        <!-- DATO 4 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>4. Privilegio Geográfico: Costas y Santuarios en Dos Océanos</h3>
+            </div>
+            <span class="curiosity-badge">Litoral Pacífico & Mar Caribe</span>
+          </div>
+          <p>
+            Gracias a su condición de puente ístmico interoceánico, el país posee 1.228 km de litorales bañados por dos
+            grandes masas de agua: el <strong>Océano Pacífico al Oeste</strong> (con extensas penínsulas, rompientes
+            para el surf y el Parque Nacional Corcovado) y el <strong>Mar Caribe al Este</strong> (con canales naturales
+            navegables en Tortuguero, manglares y arrecifes de coral en Cahuita). Además, gracias a la emblemática
+            <strong>Isla del Coco</strong> —Patrimonio Natural de la Humanidad UNESCO—, su territorio marino protegido
+            alcanza más de 574.000 km², superando por más de diez veces toda su superficie continental.
+          </p>
+          <div class="curiosity-impact">
+            Dimensión Marina: Su territorio oceánico protegido multiplica por más de diez veces la extensión terrestre
+            del país.
+          </div>
+        </div>
+
+        <!-- DATO 5 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>5. Bienestar Humano: Uno de los Países Más Felices del Mundo</h3>
+            </div>
+            <span class="curiosity-badge">Pura Vida & Zona Azul de Nicoya</span>
+          </div>
+          <p>
+            Costa Rica se ubica constantemente en los primeros lugares globales del <em>Happy Planet Index</em> (HPI) y
+            es el país más feliz de América Latina según el Informe Mundial de la Felicidad de la ONU. Este bienestar se
+            sustenta en la paz civil, acceso equitativo al agua potable y la filosofía del <strong>“¡Pura
+              vida!”</strong>, que promueve la gratitud, el optimismo y la solidaridad cotidiana. Asimismo, la
+            <strong>Península de Nicoya</strong> es una de las únicas cinco "Zonas Azules" del planeta, donde una
+            notable proporción de habitantes supera los 100 años con vitalidad física, gracias a su dieta saludable,
+            agua rica en calcio y sólidos lazos comunitarios.
+          </p>
+          <div class="curiosity-impact">
+            Zona Azul Mundial: Población centenaria activa con una de las tasas de longevidad saludable más altas del
+            globo terráqueo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">3 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 4: CULTURA, SÍMBOLOS & GASTRONOMÍA ==================== -->
+  <section class="page">
+    <div class="page-header">
+      <span class="highlight">Sección: Símbolos Patrios, Folclore & Música</span>
+      <span>PURA VIDA &bull; Pág. 4</span>
+    </div>
+
+    <div class="content-area">
+      <div class="section-header" style="text-align: center;">
+        <h2>SÍMBOLOS PATRIOS, FOLCLORE Y EL SABOR DE LA TIERRA TICA</h2>
+      </div>
+
+      <p class="dropcap no-indent" style="font-size:8.2pt; line-height:1.35; margin-bottom:8px;">
+        Seguimos con nuestra programación de <strong>PURA VIDA NOTICIAS</strong> y toca darle paso a nuestra
+        corresponsal
+        Rafaela, quien nos habla sobre los símbolos patrios y nacionales, sus trajes típicos y el folclor de la hermosa
+        Costa Rica, completando con las comidas típicas más queridas por su pueblo.
+      </p>
+
+      <!-- FILA SUPERIOR: SÍMBOLOS PATRIOS Y TRAJE TÍPICO -->
+      <div class="grid-2col" style="margin-bottom:8px;">
+        <!-- COLUMNA 1: SÍMBOLOS PATRIOS Y NACIONALES -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:155px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image15.jpeg" alt="Símbolos Patrios y Nacionales de Costa Rica"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.1 & 4.2 Símbolos Patrios y Nacionales (Rafaela)
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Bandera (1848):</strong> Inspirada en Francia. <em>Azul</em> (el cielo protector), <em>Blanco</em>
+            (la paz y sabiduría) y <em>Rojo</em> (energía, valentía y trabajo por la libertad).
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Escudo e Himno:</strong> Escudo (1848/1998) con volcanes, dos océanos y barcos. Himno Nacional
+            (1852/1903): canto a la paz y al trabajo sin ensalzar la guerra.
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0;">
+            <strong>Emblemas:</strong> Guaria morada (1939, unión familiar), Árbol de Guanacaste (1959, fortaleza y
+            Anexión de Nicoya), Ave Yigüirro (1977, anuncio de lluvias) y la Carreta típica (1988, Patrimonio UNESCO
+            2005).
+          </p>
+        </div>
+
+        <!-- COLUMNA 2: TRAJE TÍPICO -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:155px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image16.jpeg" alt="Traje Típico Tradicional de Costa Rica"
+              style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.3 Traje Típico Tradicional de Costa Rica
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Traje de la Mujer:</strong> Blusa o cotona blanca con finos encajes y vuelos; <em>enagua</em> amplia
+            y muy colorida decorada con cintas en tonos vivos (rojo, azul y blanco); faja roja en la cintura, cinta
+            negra al cuello con medalla y trenzas con flores naturales de guaria morada.
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0;">
+            <strong>Traje del Hombre:</strong> Camisa blanca o de manta con botones al frente; pantalón de dril o
+            mezclilla; pañuelo rojo o azul anudado al cuello, faja en la cintura y el tradicional sombrero de paja
+            campesino o <em>chonete</em> blanco, orgullo del labrador tico.
+          </p>
+        </div>
+      </div>
+
+      <!-- FILA INFERIOR: MÚSICA Y COMIDAS TÍPICAS -->
+      <div class="grid-2col">
+        <!-- COLUMNA 1: LA MARIMBA -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:135px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image17.jpeg" alt="La Marimba: Instrumento característico del folclor nacional"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.4 Instrumento Musical: La Marimba
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0; color:var(--dark-text);">
+            Por medio de ella los costarricenses se identifican como miembros de una comunidad como lo es Guanacaste,
+            cuna del folclor auténtico. La marimba es el instrumento más importante del país: a su alrededor gira la
+            actividad cultural, artística y tradicional en cada festividad patria.
+          </p>
+        </div>
+
+        <!-- COLUMNA 2: COMIDAS TÍPICAS -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:135px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image19.jpeg"
+              alt="Comida Típica de Costa Rica: Gallo Pinto, Casado y Sopa de Mondongo"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            5.1 Comidas Típicas de Costa Rica
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0; color:var(--dark-text);">
+            <strong>Gallo pinto:</strong> Arroz y frijoles mezclados y salteados, con huevo, plátano y aguacate
+            (desayuno insigne). <strong>Casado:</strong> Plato tradicional completo con arroz, frijoles, carne, ensalada
+            y plátano maduro. <strong>Sopa de mondongo:</strong> Caldo nutritivo y reconfortante con verduras y especias
+            criollas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">4 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 5: CUADRO COMPARATIVO COSTA RICA - BOLIVIA ==================== -->
+  <section class="page">
+    <div class="page-header">
+      <span class="highlight">Sección: Estudio Comparativo Bilateral</span>
+      <span>PURA VIDA &bull; Pág. 5</span>
+    </div>
+
+    <div class="content-area">
+      <div class="section-header" style="text-align: center;">
+        <h2>COSTA RICA Y BOLIVIA: POLÍTICA, GEOGRAFÍA Y ECONOMÍA FRENTE A FRENTE</h2>
+      </div>
+
+      <p class="dropcap no-indent">
+        Hoy tenemos a nuestra compañera Keila en <strong>PURA VIDA NOTICIAS</strong>, quien nos presenta un exhaustivo
+        análisis comparativo entre Costa Rica y Bolivia en cuanto a su división política, geografía, cultura, economía y
+        biodiversidad, ilustrado con los recursos visuales oficiales de nuestra investigación escolar.
+      </p>
+
+      <!-- 6. CUADRO DE COMPARACIÓN COSTA RICA CON BOLIVIA (KEILA) - 8 PARES DE IMÁGENES -->
+      <div class="comparison-grid">
+
+        <!-- 1. DIVISIÓN POLÍTICA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>1. División Política</span>
+            <span style="color:var(--accent-dark);">7 Provincias vs 9 Departamentos</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image20.gif" alt="7 Provincias de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>7 Provincias</strong> (San José, Alajuela, Cartago, Heredia, Guanacaste,
+                Puntarenas, Limón)</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image21.jpeg" alt="9 Departamentos de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>9 Departamentos</strong> (La Paz, Santa Cruz, Cbba, Oruro, Potosí, Chuquisaca,
+                Tarija, Beni, Pando)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. CAPITAL CONSTITUCIONAL -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>2. Capital Constitucional</span>
+            <span style="color:var(--accent-dark);">San José vs Sucre</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image22.jpeg" alt="San José, Capital de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>San José:</strong> Capital nacional, sede de los tres poderes del Estado y centro
+                financiero.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image23.jpeg" alt="Sucre, Capital Histórica de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Sucre:</strong> Capital Histórica y Constitucional (con La Paz como sede de
+                gobierno).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. IDIOMA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>3. Idioma Oficial</span>
+            <span style="color:var(--accent-dark);">Español & Diversidad Lingüística</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image24.jpeg" alt="Idioma en Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>Español:</strong> Idioma oficial, complementado con lenguas indígenas como bribri y
+                cabécar.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image25.jpeg" alt="Idioma en Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Plurilingüe:</strong> Castellano y 36 idiomas oficiales originarios (quechua,
+                aymara, guaraní).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MONEDA SOBERANA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>4. Moneda Soberana</span>
+            <span style="color:var(--accent-dark);">Colón (CRC) vs Boliviano (BOB)</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image26.jpeg" alt="Moneda de Costa Rica: Colón">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>Colón (₡ CRC):</strong> Billetes ilustrados con flora, fauna y ecosistemas
+                protegidos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image27.jpeg" alt="Moneda de Bolivia: Boliviano">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Boliviano (Bs BOB):</strong> Moneda soberana con próceres, patrimonio histórico y
+                biodiversidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. EXTENSIÓN TERRITORIAL -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>5. Extensión Territorial</span>
+            <span style="color:var(--accent-dark);">51.100 km² vs 1.098.581 km²</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image28.jpeg" alt="Extensión Territorial de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>51.100 km²:</strong> Puente ístmico compacto con altísima densidad biológica por
+                kilómetro cuadrado.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image29.jpeg" alt="Extensión Territorial de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>1.098.581 km²:</strong> 21,5 veces mayor que Costa Rica, abarcando Andes, Chaco y
+                Amazonía.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. FAUNA REPRESENTATIVA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>6. Fauna Representativa</span>
+            <span style="color:var(--accent-dark);">Especies Tropicales & Andinas</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image30.jpeg" alt="Fauna de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Perezosos, tucanes pico iris, monos carablanca, quetzales y ranas arborícolas de ojos
+                rojos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image31.jpeg" alt="Fauna de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Cóndores andinos, llamas, osos jucumari (de anteojos), capibaras y bufeos rosados de río.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. ATRACTIVOS TURÍSTICOS -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>7. Atractivos Turísticos</span>
+            <span style="color:var(--accent-dark);">Destinos Emblemáticos</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image32.jpeg" alt="Atractivos Turísticos de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Parque Manuel Antonio, Volcán Arenal, canales de Tortuguero y playas del Pacífico y Caribe.
+              </p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image33.jpeg" alt="Atractivos Turísticos de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Salar de Uyuni, Lago Titicaca, Parque Madidi, Tiwanaku y las Misiones de Chiquitos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. EXPORTACIONES -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>8. Exportaciones Principales</span>
+            <span style="color:var(--accent-dark);">Producción & Comercio Exterior</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image34.jpeg" alt="Exportaciones de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Dispositivos médicos de alta tecnología, café gourmet, banano, piña y servicios
+                ecoturísticos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image35.jpeg" alt="Exportaciones de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Gas natural, minerales (litio, zinc, estaño), productos agroindustriales (soya, quinua) y
+                manufacturas.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BANNER DE COSTO DE VIDA (DATO DOCX DE KEILA) -->
+      <div class="cost-living-banner">
+        <span style="flex-shrink:0; font-size:14pt;" aria-hidden="true">💡</span>
+        <div class="cost-living-banner-content">
+          <strong class="cost-living-title">DATO CLAVE DE KEILA: COSTO DE VIDA COMPARATIVO</strong>
+          <p>
+            El costo de vida en <strong>La Paz (Bolivia)</strong> es un <strong>68% más accesible</strong> que en
+            <strong>San José (Costa Rica)</strong>, un indicador que refleja la diversidad socioeconómica de América
+            Latina y resalta el valor del intercambio educativo entre nuestras juventudes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">5 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 6: FAUNA COMPARTIDA, PASAPORTE & CIERRE ==================== -->
+  <section class="page">
+    <div class="page-header">
+      <span class="highlight">Sección: Fauna Compartida & Pasaporte Ecológico</span>
+      <span>PURA VIDA &bull; Pág. 6</span>
+    </div>
+
+    <div class="content-area">
+      <div class="section-header" style="text-align: center;">
+        <h2>HERMANDAD BIOLÓGICA Y TU PASAPORTE DE VIAJERO PURA VIDA</h2>
+      </div>
+
+      <p class="dropcap no-indent">
+        Y de esta manera es como ya vamos llegando a la parte final de nuestra programación con <strong>PURA VIDA
+          NOTICIAS</strong>.
+        Para ello, está en exteriores nuestro colega de trabajo Farid, quien nos habla sobre la biodiversidad de la
+        fauna
+        existente en ambos países y concluye con la dinámica pedagógica del pasaporte escolar.
+      </p>
+
+      <!-- 7. FAUNA DE COSTA RICA Y BOLIVIA (FARID) - DOS GRANDES INFOGRAFÍAS NATIVAS -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 6px;">
+        <div
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px; display:flex; flex-direction:column;">
+          <div style="width:100%; height:118px; border-radius:3px; overflow:hidden; margin-bottom:4px;">
+            <img src="images/docx/image36.jpeg"
+              alt="Fauna de Costa Rica y Bolivia: Dos países, una increíble biodiversidad"
+              style="width:100%; height:100%; object-fit:cover; display:block; border-radius:3px;">
+          </div>
+          <strong
+            style="font-family:'Work Sans', sans-serif; font-size:6.8pt; color:var(--primary); margin-bottom:2px;">
+            Fauna de Costa Rica &bull; Bosques Tropicales y Costas
+          </strong>
+          <p style="font-size:6.3pt; line-height:1.2; margin:0; text-indent:0; color:var(--dark-text);">
+            Costa Rica acoge al perezoso de tres dedos, tucán pico iris, mono carablanca, rana arborícola de ojos rojos,
+            tortuga marina verde y quetzal resplandeciente en un territorio compacto.
+          </p>
+        </div>
+
+        <div
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px; display:flex; flex-direction:column;">
+          <div style="width:100%; height:118px; border-radius:3px; overflow:hidden; margin-bottom:4px;">
+            <img src="images/docx/image37.jpeg" alt="Animales que viven en ambos países: Jaguar, Puma, Tapir, Caimán"
+              style="width:100%; height:100%; object-fit:cover; display:block; border-radius:3px;">
+          </div>
+          <strong
+            style="font-family:'Work Sans', sans-serif; font-size:6.8pt; color:var(--primary); margin-bottom:2px;">
+            Animales Que Viven en Ambos Países &bull; Especies Puente
+          </strong>
+          <p style="font-size:6.3pt; line-height:1.2; margin:0; text-indent:0; color:var(--dark-text);">
+            El <strong>jaguar</strong>, el <strong>puma</strong>, el <strong>tapir</strong> y el <strong>caimán</strong>
+            habitan tanto en Costa Rica como en Bolivia, demostrando que la naturaleza no reconoce fronteras humanas.
+          </p>
+        </div>
+      </div>
+
+      <!-- CITA DE FARID -->
+      <div
+        style="background:#F2F7F4; border-left:3px solid var(--primary); padding:6px 10px; margin-bottom:6px; font-style:italic; font-size:6.8pt; line-height:1.26; color:var(--primary);">
+        “Costa Rica y Bolivia tienen muchos animales increíbles. En Costa Rica encontramos perezosos, tucanes y ranas de
+        ojos rojos; en Bolivia tenemos llamas, cóndores y osos jucumaris. Pero también compartimos animales como el
+        jaguar, el puma y el tapir. ¡Los dos países tienen una naturaleza maravillosa que debemos proteger!” &bull;
+        <strong>Farid Romero</strong>
+      </div>
+
+      <!-- 8. PASAPORTE ESCOLAR (FARID) -->
+      <div
+        style="background:#FAF8F2; border:1.5px dashed var(--primary-light); border-radius:4px; padding:8px 10px; display:flex; gap:10px; align-items:center; margin-bottom:6px;">
+        <div style="flex:0 0 100px; border-radius:3px; overflow:hidden; border:1px solid #C4B9A7;">
+          <img src="images/docx/image38.png" alt="Pasaporte Costa Rica: Explorador Ecológico Feria Escolar"
+            style="width:100%; height:auto; display:block;">
+        </div>
+        <div style="flex:1;">
+          <div style="display:flex; align-items:center; gap:5px; margin-bottom:2px;">
+            <span style="font-size:11pt;" aria-hidden="true">🛂</span>
+            <h3 style="font-family:'Cinzel', serif; font-size:8.4pt; font-weight:800; color:var(--primary); margin:0;">
+              8. PASAPORTE: EXPLORADOR ECOLÓGICO PURA VIDA (FARID)
+            </h3>
+          </div>
+          <p style="font-size:6.8pt; line-height:1.24; margin:0 0 4px 0; text-indent:0; color:var(--dark-text);">
+            “Es un documento que sirve para acreditar la identidad y nacionalidad de una persona, fuera de su país.” En
+            nuestra feria escolar, este pasaporte certifica tu misión: <strong>¡cuidar el planeta y proteger la
+              biodiversidad!</strong>
+          </p>
+          <div
+            style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; background:rgba(255,255,255,0.7); border:1px solid #D5E5DC; border-radius:4px; padding:8px 6px;">
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 1</div>
+              <div style="font-size:9pt; line-height:1.2;">🌋</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Volcanes (Poás)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 2</div>
+              <div style="font-size:9pt; line-height:1.2;">🦥</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Animales (Perezoso)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 3</div>
+              <div style="font-size:9pt; line-height:1.2;">🏖️</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Playas (Dos Mares)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 4</div>
+              <div style="font-size:9pt; line-height:1.2;">🌳</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Bosques (Selva)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FUENTES CIENTÍFICAS Y RECURSOS OFICIALES (MANDATORY) -->
+      <div class="web-resources-container">
+        <div class="web-resources-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#12372A" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          Bases de Información y Fuentes Oficiales para Investigación:
+        </div>
+        <div class="resources-grid">
+          <div class="resource-card">
+            <h3>1. CATIE Oficial</h3>
+            <p>Investigación agroforestal, café y cacao.</p>
+            <a href="https://www.catie.ac.cr" target="_blank" rel="noopener noreferrer"
+              aria-label="Portal oficial de investigación agroforestal del CATIE">catie.ac.cr</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>2. SINAC Costa Rica</h3>
+            <p>Parques nacionales y conservación de vida silvestre.</p>
+            <a href="https://www.sinac.go.cr" target="_blank" rel="noopener noreferrer"
+              aria-label="Directorio oficial de parques y reservas del SINAC">sinac.go.cr &rarr;</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>3. UNESCO Biosfera</h3>
+            <p>Patrimonio Mundial y reservas de biosfera.</p>
+            <a href="https://www.unesco.org" target="_blank" rel="noopener noreferrer"
+              aria-label="Reservas de la Biosfera de la UNESCO en Costa Rica">unesco.org</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>4. MINAE Costa Rica</h3>
+            <p>Políticas de ambiente, energía renovable y paz.</p>
+            <a href="https://www.minae.go.cr" target="_blank" rel="noopener noreferrer"
+              aria-label="Ministerio de Ambiente y Energía de Costa Rica">minae.go.cr</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLOFÓN EDITORIAL Y CIERRE DEL NOTICIERO -->
+      <div class="colophon-container">
+        <div class="colophon-header">
+          <span class="colophon-title">PURA VIDA NOTICIAS &bull; CIERRE DE TRANSMISIÓN 2026</span>
+          <span class="colophon-date">Santa Cruz, Noviembre 2026</span>
+        </div>
+        <p class="colophon-quote">
+          “Esto fue nuestra presentación de PURA VIDA NOTICIAS. ¡Gracias por acompañarnos, hasta una nueva oportunidad,
+          tengan todos, muy buenas tardes!”
+        </p>
+        <div class="colophon-credits">
+          <span style="flex: 1.2;"><strong>Producción Escolar:</strong> Colegio Británico Santa Cruz &bull; Feria de
+            Ciencias</span>
+          <span style="text-align: right;">¡Pura Vida! </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <span>PURA VIDA &bull; Periódico Ecológico Escolar</span>
+      <span class="page-number">6 / 6</span>
+      <span>Colegio Británico Santa Cruz &bull; Edición 2026</span>
+    </div>
+  </section>
+
+</body>
+
+</html>

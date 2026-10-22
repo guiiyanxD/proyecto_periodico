@@ -1451,95 +1451,754 @@
     .editorial-seal-text strong {
       color: var(--primary);
     }
+
+    /* Team Credits Bar on Page 1 */
+    .team-credits-bar {
+      border-top: 1px solid var(--primary);
+      border-bottom: 1px solid var(--primary);
+      padding: 3px 0;
+      margin-bottom: 7px;
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .team-credits-bar .credits-label {
+      font-size: 6.8pt;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary);
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .team-credits-bar .credits-names {
+      font-size: 7.2pt;
+      font-weight: 600;
+      color: #2D3142;
+    }
+
+    /* Culture & Símbolos Cards for Page 4 */
+    .culture-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .culture-photo-box {
+      position: relative;
+      width: 100%;
+      height: 165px;
+      overflow: hidden;
+    }
+
+    .culture-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .culture-photo-credit {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.2pt;
+      color: #222;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 2px 6px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-top-left-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .culture-body {
+      padding: 6px 9px 7px 9px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .culture-body h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 1px;
+    }
+
+    .culture-body span.scientific {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .culture-body p {
+      font-size: 7.5pt;
+      text-indent: 0;
+      line-height: 1.32;
+      margin-bottom: 3px;
+      color: var(--dark-text);
+    }
+
+    .culture-body .stats-pill {
+      margin-top: auto;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      padding: 2px 6px;
+      border-radius: 3px;
+      align-self: flex-start;
+      border: 1px solid #C5E0D8;
+    }
+
+    /* Curiosidades de Costa Rica for Page 3 */
+    .livana-hero-box {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 9px 12px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .livana-img-wrap {
+      flex: 0 0 115px;
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid #C4B9A7;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .livana-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .livana-hero-text {
+      flex: 1;
+    }
+
+    .livana-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.2pt;
+      font-weight: 800;
+      color: var(--accent-dark);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .livana-hero-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 9.6pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 3px 0;
+    }
+
+    .livana-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 7.2pt;
+      line-height: 1.32;
+      color: var(--dark-text);
+      margin: 0 0 4px 0;
+      text-indent: 0;
+    }
+
+    .livana-meta {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.4pt;
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .livana-meta strong {
+      color: var(--primary);
+    }
+
+    /* 5 Curious Facts Cards */
+    .curiosity-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6.5px;
+    }
+
+    .curiosity-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .curiosity-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+
+    .curiosity-title-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .curiosity-icon {
+      font-size: 11pt;
+      line-height: 1;
+    }
+
+    .curiosity-header h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 8pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .curiosity-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.8pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      border: 1px solid #C5E0D8;
+      border-radius: 3px;
+      padding: 1.5px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      flex-shrink: 0;
+    }
+
+    .curiosity-card p {
+      font-family: 'Lora', serif;
+      font-size: 7.1pt;
+      line-height: 1.34;
+      margin: 0 0 4px 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    .curiosity-impact {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.3pt;
+      font-weight: 700;
+      color: var(--accent-dark);
+      background: #FAF6ED;
+      border-left: 2.5px solid var(--accent);
+      padding: 2.5px 7px;
+      border-radius: 0 2px 2px 0;
+      align-self: flex-start;
+    }
+
+    /* Comparison Table on Page 6 */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      margin-bottom: 6px;
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .comparison-table th {
+      background: var(--primary);
+      color: white;
+      padding: 4px 6px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 7.2pt;
+    }
+
+    .comparison-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ECECEC;
+      vertical-align: middle;
+      line-height: 1.32;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #F9FBFA;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Passport Interactive Box on Page 6 */
+    .passport-box {
+      background: #FAF8F2;
+      border: 1.5px dashed var(--primary-light);
+      border-radius: 4px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    /* School Header on Page 1 */
+    .school-header-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+      margin-bottom: 7px;
+    }
+
+    .school-logo-box {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .school-logo-box img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .school-logo-text {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Landscape Sections on Page 2 */
+    .country-landscape-section {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 8px 10px;
+      margin-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .country-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .country-header-flex h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .country-badge {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6pt;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #F1FAEE;
+      border: 1px solid #C5E0D8;
+      border-radius: 3px;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .landscape-place-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .landscape-place-card {
+      background: #FAF8F2;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .landscape-place-card img {
+      width: 100%;
+      height: 72px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      margin-bottom: 5px;
+    }
+
+    .landscape-place-card h4 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 1px 0;
+      line-height: 1.2;
+    }
+
+    .landscape-place-card span.geo-tag {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 6pt;
+      font-weight: 600;
+      color: var(--accent-dark);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .landscape-place-card p {
+      font-size: 6.4pt;
+      line-height: 1.24;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Math Analysis Box for Page 2 */
+    .math-analysis-box {
+      background: #FAF8F2;
+      border: 1px solid #D8CEBE;
+      border-radius: 4px;
+      padding: 8px 12px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .math-img-wrap {
+      flex: 0 0 215px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #C4B9A7;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .math-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .math-content-wrap {
+      flex: 1;
+    }
+
+    .math-content-wrap h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 3px;
+    }
+
+    .math-metric-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .math-metric-item {
+      background: white;
+      border: 1px solid #E2DCD2;
+      border-radius: 3px;
+      padding: 3px 5px;
+    }
+
+    .math-metric-item strong {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 6.4pt;
+      color: var(--primary);
+      display: block;
+    }
+
+    .math-metric-item p {
+      font-size: 6.3pt;
+      line-height: 1.2;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Comparison Grid & Cards for Page 5 */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+
+    .comparison-item-card {
+      background: white;
+      border: 1px solid var(--border-card);
+      border-radius: 4px;
+      padding: 6px 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comparison-item-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7pt;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .comparison-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .comparison-col-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .comparison-col-side img {
+      width: 100%;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 2px;
+      border: 1px solid #E5E5E5;
+      margin-bottom: 2px;
+    }
+
+    .comparison-col-side span.label {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 5.5pt;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .comparison-col-side p.val {
+      font-family: 'Lora', serif;
+      font-size: 6.2pt;
+      line-height: 1.18;
+      margin: 0;
+      text-indent: 0;
+      color: var(--dark-text);
+    }
+
+    /* Cost of living banner on Page 5 */
+    .cost-living-banner {
+      background: #FFF9E6;
+      border: 1px solid #E5C365;
+      border-radius: 4px;
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .cost-living-banner-content {
+      flex: 1;
+    }
+
+    .cost-living-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 800;
+      color: #7A5700;
+      display: block;
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .cost-living-banner p {
+      font-size: 6.8pt;
+      line-height: 1.28;
+      margin: 0;
+      text-indent: 0;
+      color: #5A4000;
+    }
+
+    .cost-living-banner p strong {
+      display: inline;
+      font-weight: 700;
+      color: #3D2B00;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ==================== PÁGINA 1: PORTADA & EDITORIAL ==================== -->
+  <!-- ==================== PÁGINA 1: PORTADA & PRESENTACIÓN CONTINENTAL ==================== -->
   <section class="page">
-    <div class="page-header">
-      <span>Colegio Británico Santa Cruz</span>
-      <span>Divulgación Científica</span>
+    <div class="school-header-wrap">
+      <div class="school-logo-box">
+        <img src="images/docx/image1.png" alt="Escudo Oficial Colegio Británico Santa Cruz">
+        <span class="school-logo-text">Colegio Británico Santa Cruz &bull; Desde 1978</span>
+      </div>
+      <div
+        style="font-family:'Work Sans', sans-serif; font-size:6.8pt; font-weight:700; color:var(--primary-light); text-transform:uppercase; letter-spacing:0.8px;">
+        Feria Escolar de Ciencias &bull; Noviembre 2026
+      </div>
     </div>
 
     <div class="content-area">
       <div class="masthead">
         <div class="masthead-title">PURA VIDA</div>
-        <div class="masthead-subtitle">Periódico de Divulgación Ecológica, Cultural y Científica de Costa Rica</div>
+        <div class="masthead-subtitle">Periódico Escolar &bull; Edición Especial: PURA VIDA NOTICIAS</div>
       </div>
 
-      <h1 class="headline">COSTA RICA: SANTUARIO VERDE DEL MUNDO</h1>
+      <div class="team-credits-bar">
+        <span class="credits-label">INTEGRANTES:</span>
+        <span class="credits-names">Rafaela Blanco &bull; Livana Cárdenas &bull; Stefano Flores &bull; Sofia Franco
+          &bull; Keila Monserrat Montaño &bull; Farid Romero &bull; Mia Martina Sardina</span>
+      </div>
+
+      <h1 class="headline">COSTA RICA Y BOLIVIA</h1>
       <div class="subdeck">
-        Cómo una nación de apenas 51,100 km² logró proteger más del 25% de su territorio terrestre y consolidarse como
-        la capital moral de la biodiversidad global.
+        Dos naciones, una sola voz: descubriendo la geografía, la calidez de su gente y la filosofía del “¡Pura vida!”.
       </div>
 
-      <div class="visual-banner">
-        <div>
-          <h2>Un Manifiesto de Esperanza para América Latina</h2>
-          <p>Desde las faldas del Volcán Arenal hasta la selva virgen de Corcovado, Costa Rica demuestra que la
-            prosperidad de un pueblo se mide por la salud de sus ríos, la pureza de sus bosques y la vitalidad de sus
-            especies vivas.</p>
+      <!-- BANNER DE APERTURA: SOFIA PRESENTA PURA VIDA NOTICIAS -->
+      <div
+        style="background:white; border:1px solid var(--border-card); border-radius:5px; padding:9px 12px; margin-bottom:10px; display:flex; gap:14px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+        <div style="flex:0 0 120px; border-radius:4px; overflow:hidden; border:1px solid #E2DCD2;">
+          <img src="images/docx/image2.jpeg" alt="Portada Explorando Costa Rica: Mi viaje por la tierra de la pura vida"
+            style="width:100%; height:auto; display:block;">
         </div>
-        <svg width="105" height="63" viewBox="0 0 100 60"
-          style="border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); flex-shrink: 0;">
-          <rect width="100" height="60" fill="#002B7F" />
-          <rect y="10" width="100" height="40" fill="#FFFFFF" />
-          <rect y="20" width="100" height="20" fill="#CE1126" />
-        </svg>
+        <div style="flex:1;">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+            <h2 style="font-family:'Cinzel', serif; font-size:10pt; font-weight:800; color:var(--primary); margin:0;">
+              1. PRESENTACIÓN: PURA VIDA NOTICIAS
+            </h2>
+          </div>
+          <p style="font-size:7.8pt; line-height:1.34; margin-bottom:4px; color:var(--dark-text); font-style:italic;">
+            “¡Muy buenas tardes! Bienvenidos a <strong>PURA VIDA NOTICIAS</strong>. Mi nombre es Sofia y hoy quiero
+            llevarlos a conocer un poquito más de un hermoso país llamado Costa Rica 🇨🇷. Dos países diferentes, pero
+            ambos llenos de cultura, naturaleza y gente maravillosa.”
+          </p>
+          <div
+            style="font-family:'Work Sans', sans-serif; font-size:6.6pt; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.5px;">
+            Edición Escolar Especial &bull; Divulgación Pedagógica Primaria & Secundaria
+          </div>
+        </div>
+        <div style="flex:0 0 110px; border-radius:4px; overflow:hidden; border:1px solid #E2DCD2;">
+          <img src="images/docx/image3.jpeg" alt="Mapa geográfico de Costa Rica entre dos océanos"
+            style="width:100%; height:auto; display:block;">
+        </div>
       </div>
 
       <div class="grid-3col">
         <div class="col">
-          <p class="dropcap no-indent">
-            Vivimos en un momento crucial de la historia humana donde hablar del medio ambiente no representa un
-            ejercicio decorativo ni un eslogan pasajero, sino una urgencia vital. En el marco del Festival Ecológico del
-            Colegio Británico de Bolivia, nuestro equipo de redacción e investigación fija su mirada en Costa Rica, una
-            nación centroamericana cuyo modelo de desarrollo sostenible ofrece respuestas palpables al calentamiento
-            global.
+          <h3 style="font-family:'Cinzel', serif; font-size:8.8pt; color:var(--primary); margin-bottom:4px;">
+            Ubicación y Geografía
+          </h3>
+          <p class="dropcap no-indent" style="font-size:8pt; line-height:1.35;">
+            Costa Rica está ubicada en Centroamérica, entre Nicaragua al Norte y Panamá al Sur, y tiene costas en dos
+            grandes masas de agua: en el Océano Pacífico al Oeste y en el Mar Caribe al Este. Su capital es San José,
+            centro administrativo y cultural de la nación.
           </p>
-          <p>
-            Ocupando escasamente el 0.03% de la superficie continental de la Tierra, Costa Rica resguarda casi el 6% de
-            toda la biodiversidad conocida. Esta abundancia de vida silvestre no es fruto del azar: es la consecuencia
-            de más de medio siglo de políticas de Estado serias, fundamentadas en el rigor científico y el respeto
-            irrestricto por los ecosistemas naturales.
+          <p style="font-size:8pt; line-height:1.35;">
+            Es un territorio famoso en el mundo entero por sus hermosos paisajes, playas paradisíacas, volcanes
+            imponentes y bosques colmados de vida silvestre.
           </p>
         </div>
 
         <div class="col">
-          <p class="no-indent">
-            A diferencia de economías basadas en la extracción de combustibles fósiles, Costa Rica transformó sus
-            bosques en reservas biológicas. El país consolidó el Sistema Nacional de Áreas de Conservación (SINAC) y
-            respaldó a instituciones científicas de prestigio continental como el <strong>CATIE</strong>.
+          <h3 style="font-family:'Cinzel', serif; font-size:8.8pt; color:var(--primary); margin-bottom:4px;">
+            Fauna Emblemática Inicial
+          </h3>
+          <p class="no-indent" style="font-size:8pt; line-height:1.35;">
+            Costa Rica resguarda una enorme variedad de fauna autóctona en sus selvas húmedas, entre los que destacan
+            monos, tucanes y los famosos perezosos.
           </p>
-          <div class="infobox">
-            <div class="infobox-title">
-              <span class="badge-tag">Dato </span> Récord Limpio
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:5px 0 7px 0;">
+            <div style="display:flex; flex-direction:column; gap:2px; text-align:center;">
+              <img src="images/docx/image4.jpeg" alt="El Perezoso de Costa Rica"
+                style="width:100%; height:72px; object-fit:cover; display:block; border-radius:3px; border:1px solid #E0E0E0;">
+              <span
+                style="font-family:'Work Sans', sans-serif; font-size:6.2pt; font-weight:700; color:var(--primary); display:block;">El
+                Perezoso</span>
             </div>
-            <p>Por más de ocho años consecutivos, más del <strong>98% de la electricidad</strong> producida en Costa
-              Rica proviene de fuentes renovables (agua, calor volcánico, viento y radiación solar).</p>
+            <div style="display:flex; flex-direction:column; gap:2px; text-align:center;">
+              <img src="images/docx/image5.jpeg" alt="El Tucán de Costa Rica"
+                style="width:100%; height:72px; object-fit:cover; display:block; border-radius:3px; border:1px solid #E0E0E0;">
+              <span
+                style="font-family:'Work Sans', sans-serif; font-size:6.2pt; font-weight:700; color:var(--primary); display:block;">El
+                Tucán</span>
+            </div>
           </div>
-          <p>
-            Para nuestra comunidad educativa en Bolivia, este horizonte es una hoja de ruta práctica que nos invita a
-            transformar los hábitos de consumo en nuestras aulas y hogares.
+          <p style="font-size:7.8pt; line-height:1.32;">
+            Estas especies habitan el dosel selvático y constituyen el corazón de los programas de conservación
+            neotropical.
           </p>
         </div>
 
         <div class="col">
-          <div class="index-box">
-            <div class="index-box-title">Sumario de la Edición</div>
-            <div class="index-item"><span>Pág. 2: Fauna & Bioindicadores</span><span class="page-ref">P. 2</span></div>
-            <div class="index-item"><span>Pág. 3: Gigantes Volcánicos</span><span class="page-ref">P. 3</span></div>
-            <div class="index-item"><span>Pág. 4: Mares & Arrecifes</span><span class="page-ref">P. 4</span></div>
-            <div class="index-item"><span>Pág. 5: Investigación & CATIE</span><span class="page-ref">P. 5</span></div>
-            <div class="index-item"><span>Pág. 6: Decálogo Ambiental</span><span class="page-ref">P. 6</span></div>
+          <div
+            style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px; margin-bottom:8px; display:flex; gap:8px; align-items:center;">
+            <img src="images/docx/image6.jpeg" alt="Cultura de alegría y optimismo costarricense"
+              style="width:68px; height:54px; object-fit:cover; border-radius:3px; border:1px solid #E2DCD2;">
+            <div>
+              <strong
+                style="font-family:'Work Sans', sans-serif; font-size:7pt; color:var(--primary); display:block;">“¡PURA
+                VIDA!”</strong>
+              <p style="font-size:6.6pt; line-height:1.24; margin:0; text-indent:0; color:var(--dark-text);">
+                Frase insigne que los ticos usan para saludar, agradecer o expresar alegría. De ahí surge el nombre de
+                nuestro noticiero escolar.
+              </p>
+            </div>
           </div>
 
-          <div class="quote-box">
-            "La naturaleza no nos pertenece: nosotros pertenecemos a la naturaleza. Respetarla es asegurar el porvenir
-            de la humanidad."
-            <span class="author">Farid Romero Satt</span>
+          <div class="index-box" style="margin-bottom:8px; padding:8px 10px;">
+            <div class="index-box-title" style="margin-bottom:5px;">Sumario de la Edición</div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 2: Paisajes Fraternos & Matemáticas</span><span
+                class="page-ref">P. 2</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 3: Los 5 Datos Curiosos de Costa
+                Rica</span><span class="page-ref">P. 3</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 4: Símbolos, Tradición & Música</span><span
+                class="page-ref">P. 4</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 5: Cuadro Comparativo Bilateral</span><span
+                class="page-ref">P. 5</span></div>
+            <div class="index-item" style="padding:2.5px 0;"><span>Pág. 6: Fauna Compartida & Pasaporte</span><span
+                class="page-ref">P. 6</span></div>
+          </div>
+
+          <div class="quote-box" style="margin:0; padding:6px 10px;">
+            "La naturaleza no nos pertenece: nosotros pertenecemos a la naturaleza."
+            <span class="author">Santa Cruz, Noviembre 2026</span>
           </div>
         </div>
       </div>
@@ -1552,126 +2211,140 @@
     </div>
   </section>
 
-  <!-- ==================== PÁGINA 2: FAUNA EXTRAORDINARIA ==================== -->
+  <!-- ==================== PÁGINA 2: PAISAJES FRATERNOS & ANÁLISIS MATEMÁTICO ==================== -->
   <section class="page">
     <div class="page-header">
-      <span class="highlight">Sección: Biodiversidad Neotropical</span>
+      <span class="highlight">Sección: Paisajes Fraternos & Análisis Matemático</span>
       <span>PURA VIDA &bull; Pág. 2</span>
     </div>
 
     <div class="content-area">
       <div class="section-header" style="text-align: center;">
-        <h2>LA ASOMBROSA FAUNA COSTARRICENSE: 500,000 Especies Registradas</h2>
+        <h2>DE LOS ANDES AL CARIBE: BELLEZAS NATURALES Y ANÁLISIS MATEMÁTICO</h2>
       </div>
 
       <p class="dropcap no-indent">
-        La posición de Costa Rica como puente biológico entre América del Norte y del Sur dio origen a una concentración
-        de vida irrepetible. Cada especie desempeña un papel irremplazable: desde la polinización de flores selváticas
-        hasta el control biológico de plagas que protegen la estabilidad de las selvas y los cursos de agua dulce.
+        Y aunque Costa Rica y Bolivia son diferentes, los dos son países de Latinoamérica con una gran riqueza cultural
+        y hermosos paisajes. Dos pueblos hermanos unidos por el continente que hoy descubrimos mediante la geografía de
+        sus territorios y la precisión del análisis matemático escolar.
       </p>
 
-      <div class="card-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px;">
+      <!-- COMPARATIVA VISUAL DE PAISAJES (DOCX) -->
+      <!-- BLOQUE 1: BOLIVIA -->
+      <div class="country-landscape-section">
+        <div class="country-header-flex">
+          <h3>🇧🇴 Bolivia: Montañas, Valles, Altiplano y Salares</h3>
+          <span class="country-badge">Sistemas Ecológicos Andinos & Llanos</span>
 
-        <!-- 1. RANA ARBORÍCOLA DE OJOS ROJOS -->
-        <div class="animal-card">
-          <div class="animal-photo-box">
-            <img src="images/rana_ojos_rojos.jpg"
-              alt="Rana Arborícola de Ojos Rojos (Agalychnis callidryas) en Costa Rica">
-            <div class="animal-photo-credit">Foto: Agustín Víquez &bull; Fuente: Wikimedia Commons (CC BY-SA 4.0)</div>
+        </div>
+        <div class="landscape-place-grid">
+          <!-- LUGAR 1: SALAR DE UYUNI -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image7.jpeg" alt="Salar de Uyuni, Potosí, Bolivia">
+            <h4>Salar de Uyuni</h4>
+            <span class="geo-tag">Potosí &bull; 3.650 m s.n.m.</span>
+            <p>El desierto de sal continuo más grande del mundo (10.582 km²). Alberga gigantescas reservas de litio y
+              crea un asombroso efecto espejo con las lluvias estacionales.</p>
           </div>
-          <div class="animal-body">
-            <h3>Rana Arborícola de Ojos Rojos</h3>
-            <span class="scientific">Agalychnis callidryas &bull; Bioindicador Neotropical</span>
-            <p><strong>Adaptación defensiva:</strong> Sus enormes ojos rojos producen un reflejo de sobresalto visual
-              que desconcierta a depredadores nocturnos. Posee ventosas digitales adhesivas para trepar el dosel húmedo.
-            </p>
-            <p><strong>Rol ecológico:</strong> Su piel permeable absorbe oxígeno y humedad; ante la menor polución
-              acuífera o sequía, su población disminuye alertando de inmediato a los biólogos.</p>
-            <div class="stats-pill">Hábitat: Vertientes Caribe y Pacífico &bull; Protegida</div>
+
+          <!-- LUGAR 2: PAISAJE ANDINO -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image8.jpeg" alt="Paisaje Andino y Cordillera Real, Bolivia">
+            <h4>Cordillera & Altiplano</h4>
+            <span class="geo-tag">Andes Centrales &bull; > 6.000 m</span>
+            <p>Imponentes nevados como el Illimani y valles glaciares que alimentan las cuencas del continente,
+              modelando la geografía y la historia de los pueblos originarios.</p>
+          </div>
+
+          <!-- LUGAR 3: EL CÓNDOR ANDINO -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image9.jpeg" alt="El Cóndor Andino en pleno vuelo, Bolivia">
+            <h4>El Cóndor Andino</h4>
+            <span class="geo-tag">Fauna Soberana &bull; Vultur gryphus</span>
+            <p>Ave insignia de los Andes que corona el Escudo Nacional de Bolivia. Simboliza la búsqueda de horizontes
+              infinitos, la fuerza y la libertad continental.</p>
           </div>
         </div>
-
-        <!-- 2. PEREZOSO DE TRES DEDOS -->
-        <div class="animal-card">
-          <div class="animal-photo-box">
-            <img src="images/perezoso_tres_dedos.jpg"
-              alt="Perezoso de tres dedos (Bradypus variegatus) en P.N. Cahuita, Costa Rica">
-            <div class="animal-photo-credit">Foto: C. Mehlführer / P.N. Cahuita &bull; Fuente: Wikimedia Commons (CC BY
-              2.5)</div>
-          </div>
-          <div class="animal-body">
-            <h3>Perezoso de Tres Dedos</h3>
-            <span class="scientific">Bradypus variegatus &bull; Símbolo Nacional de Costa Rica</span>
-            <p><strong>Metabolismo adaptativo:</strong> Su lentitud extrema minimiza el consumo calórico al alimentarse
-              de hojas fibrosas de difícil digestión en las copas de los árboles selváticos.</p>
-            <p><strong>Simbiosis única:</strong> En su pelaje crecen micro-algas clorofíceas que le otorgan camuflaje
-              verdoso frente a águilas harpías, conviviendo con polillas que abonan dicho microecosistema.</p>
-            <div class="stats-pill">Estrato: Dosel Superior &bull; Estado: Vulnerable</div>
-          </div>
-        </div>
-
-        <!-- 3. QUETZAL RESPLANDECIENTE -->
-        <div class="animal-card">
-          <div class="animal-photo-box">
-            <img src="images/quetzal_resplandeciente.jpg"
-              alt="Quetzal macho resplandeciente (Pharomachrus mocinno) en Monteverde, Costa Rica">
-            <div class="animal-photo-credit">Foto: Cephas / Monteverde &bull; Fuente: Wikimedia Commons (CC BY-SA 4.0)
-            </div>
-          </div>
-          <div class="animal-body">
-            <h3>Quetzal Resplandeciente</h3>
-            <span class="scientific">Pharomachrus mocinno &bull; Joya del Bosque Nuboso</span>
-            <p><strong>Cortejo y morfología:</strong> Habita las cumbres frescas de Monteverde y Talamanca. Durante el
-              cortejo, el macho despliega plumas caudales que superan el metro de longitud.</p>
-            <p><strong>Ingeniero forestal:</strong> Consume frutos de aguacatillo silvestre y regurgita las semillas
-              intactas lejos del árbol matriz, reforestando de manera natural la selva de niebla.</p>
-            <div class="stats-pill">Altitud: 1,500 - 3,000 msnm &bull; Dispersor Clave</div>
-          </div>
-        </div>
-
-        <!-- 4. JAGUAR MESOAMERICANO -->
-        <div class="animal-card">
-          <div class="animal-photo-box">
-            <img src="images/jaguar_mesoamericano.jpg" alt="Jaguar mesoamericano (Panthera onca) en Costa Rica">
-            <div class="animal-photo-credit">Foto: Justin Jensen / Rodtico21 &bull; Fuente: Wikimedia Commons (CC BY
-              2.0)</div>
-          </div>
-          <div class="animal-body">
-            <h3>Jaguar Mesoamericano</h3>
-            <span class="scientific">Panthera onca &bull; Guardián de la Selva Tropical</span>
-            <p><strong>Santuario Corcovado:</strong> El mayor felino de América halla en la Península de Osa una de las
-              densidades poblacionales más estables del continente, libre de caza y deforestación.</p>
-            <p><strong>Especie paraguas:</strong> Como depredador ápice, regula poblaciones de herbívoros (pecaríes y
-              venados), preservando la cobertura vegetal y las nacientes de agua dulce.</p>
-            <div class="stats-pill">Depredador Ápice &bull; Máxima Protección SINAC</div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="grid-2col" style="margin-top: 2px;">
-        <div class="col">
-          <h3 style="font-family:'Cinzel', serif; font-size:9.5pt; color:var(--primary); margin-bottom:3px;">
-            El Corredor Biológico Mesoamericano
-          </h3>
-          <p style="font-size:7.8pt; line-height:1.35;">
-            Las especies requieren desplazarse libremente para alimentarse y reproducirse sin consanguinidad.
-            Costa Rica consolidó franjas verdes conectivas entre parques nacionales y fincas privadas mediante el
-            <strong>Pago por Servicios Ambientales (PSA)</strong>, permitiendo el cruce seguro de felinos, anfibios y
-            aves.
-          </p>
+      <!-- BLOQUE 2: COSTA RICA -->
+      <div class="country-landscape-section">
+        <div class="country-header-flex">
+          <h3>🇨🇷 Costa Rica: Playas, Volcanes y Bosques</h3>
+          <span class="country-badge">Biodiversidad Tropical Interoceánica</span>
         </div>
-        <div class="col">
-          <div class="infobox" style="margin: 0;">
-            <div class="infobox-title">
-              <span class="badge-tag">Ciencia en Datos</span> Curiosidad Neotropical
-            </div>
-            <p style="font-size:7.6pt; line-height:1.32;">
-              <strong>Densidad biológica sin igual:</strong> En un solo árbol maduro de ceiba o guácimo en la estación
-              La Selva de Sarapiquí se han catalogado más de 40 especies de hormigas y 150 variedades de escarabajos,
-              superando la riqueza entomológica de países europeos enteros.
-            </p>
+        <div class="landscape-place-grid">
+          <!-- LUGAR 1: PLAYA TROPICAL -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image10.jpeg" alt="Playa Tropical de Costa Rica">
+            <h4>Playa Tropical</h4>
+            <span class="geo-tag">Costas Pacífico & Caribe</span>
+            <p>Litorales protegidos bañados por dos océanos, con arenas doradas, arrecifes de coral y cálidas aguas que
+              acogen el desove de tortugas marinas entre palmeras.</p>
           </div>
+
+          <!-- LUGAR 2: VOLCÁN POÁS -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image11.jpeg" alt="Volcán Poás y su cráter activo, Costa Rica">
+            <h4>Volcán Poás</h4>
+            <span class="geo-tag">Alajuela &bull; 2.708 m s.n.m.</span>
+            <p>Estratovolcán activo en la Cordillera Central. Su cráter principal alcanza 1,5 km de diámetro y alberga
+              una espectacular laguna hiperácida color turquesa.</p>
+          </div>
+
+          <!-- LUGAR 3: VOLCÁN ARENAL -->
+          <div class="landscape-place-card">
+            <img src="images/docx/image12.jpeg" alt="Volcán Arenal y bosque tropical, Costa Rica">
+            <h4>Volcán Arenal</h4>
+            <span class="geo-tag">San Carlos &bull; 1.670 m s.n.m.</span>
+            <p>Coloso de cono casi perfecto rodeado de exuberante selva pluvial y aguas termales. Es el corazón del
+              parque nacional homónimo y motor del ecoturismo tico.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 3: ANÁLISIS MATEMÁTICO DE MIA MARTINA (DOCX) -->
+      <div class="math-analysis-box">
+        <div class="math-img-wrap">
+          <img src="images/docx/image13.png"
+            alt="Infografía de Análisis Matemático: Costa Rica vs Bolivia por Mia Martina">
+        </div>
+        <div class="math-content-wrap">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+            <h3 style="margin:0;">3. ANÁLISIS MATEMÁTICO & COMPARATIVO (MIA MARTINA)</h3>
+          </div>
+          <p
+            style="font-size:7.2pt; line-height:1.26; margin:0 0 4px 0; text-indent:0; color:var(--dark-text); font-style:italic;">
+            Nuestra compañera de noticiero Martina nos brinda este estudio cuantitativo entre Costa Rica y Bolivia:
+          </p>
+          <div class="math-metric-list">
+            <div class="math-metric-item">
+              <strong>1. Superficie (Territorio):</strong>
+              <p>Costa Rica: 51.100 km² &bull; Bolivia: 1.098.580 km².<br><strong>Conclusión:</strong> Bolivia es
+                <strong>21,5 veces más grande</strong> que Costa Rica.
+              </p>
+            </div>
+            <div class="math-metric-item">
+              <strong>2. Población (aprox. 2025):</strong>
+              <p>Costa Rica: 5,15 millones de habitantes.<br>Bolivia: 12,58 millones de habitantes.<br><em>Costa Rica
+                  registra menor volumen demográfico.</em></p>
+            </div>
+            <div class="math-metric-item">
+              <strong>3. Diferencia de Hora:</strong>
+              <p>Costa Rica tiene <strong>-2 horas</strong> con respecto a Bolivia. Cuando en Santa Cruz son las 14:00,
+                en San José son las 12:00 m.</p>
+            </div>
+            <div class="math-metric-item">
+              <strong>4. Moneda y Valor de Cambio:</strong>
+              <p>Colón costarricense (CRC) vs. Boliviano (BOB).<br>El valor aproximado de <strong>1 CRC es Bs
+                  0,024</strong> (1 BOB &approx; 41,6 colones).</p>
+            </div>
+          </div>
+          <p
+            style="font-size:6.8pt; line-height:1.22; margin-top:4px; text-indent:0; color:var(--primary); font-weight:600;">
+            “Dos países diferentes, pero ambos llenos de cultura, naturaleza y gente maravillosa.” &bull; <em>PURA VIDA
+              NOTICIAS</em>
+          </p>
         </div>
       </div>
     </div>
@@ -1683,131 +2356,160 @@
     </div>
   </section>
 
-  <!-- ==================== PÁGINA 3: VOLCANES Y GEOLOGÍA ==================== -->
+  <!-- ==================== PÁGINA 3: LOS 5 DATOS CURIOSOS DE COSTA RICA ==================== -->
   <section class="page">
     <div class="page-header">
-      <span class="highlight">Sección: Geología & Energías Limpias</span>
+      <span class="highlight">Sección: 5 Datos Curiosos de Costa Rica</span>
       <span>PURA VIDA &bull; Pág. 3</span>
     </div>
 
     <div class="content-area">
       <div class="section-header" style="text-align: center;">
-        <h2>GIGANTES QUE DAN VIDA: LA TIERRA FÉRTIL DE LOS VOLCANES</h2>
+        <h2>LOS 5 DATOS CURIOSOS DE COSTA RICA: MODELO DE VIDA Y SOSTENIBILIDAD</h2>
       </div>
-      <br style="width: 100%; height: 2px; background-color: #004d40;">
+
       <p class="dropcap no-indent">
-        Lejos de representar únicamente una fuerza destructiva, el vulcanismo en Costa Rica es la fragua que dio
-        nacimiento a la tierra y enriqueció sus suelos durante milenios. Los minerales expulsados por las entrañas
-        terrestres nutren la flora más exuberante y proveen energía geotérmica constante, limpia y soberana.
+        Continuando con nuestra programación especial en <strong>PURA VIDA NOTICIAS</strong>, le damos el paso a nuestra
+        compañera de equipo <strong>Livana</strong>, quien nos presenta una exhaustiva investigación escolar sobre los 5
+        datos
+        curiosos más asombrosos de Costa Rica: hitos globales en megabiodiversidad, una república sin ejército militar,
+        matriz eléctrica 100% limpia, santuarios en dos océanos y la alegría contagiosa de su pueblo.
       </p>
 
-      <div class="card-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 7px;">
-
-        <!-- 1. VOLCÁN ARENAL -->
-        <div class="volcano-card">
-          <div class="volcano-photo-box">
-            <img src="images/volcan_arenal.jpg"
-              alt="Volcán Arenal (1,670 msnm), estratovolcán cónico en Alajuela, Costa Rica">
-            <div class="volcano-photo-credit">Foto: Hyraship &bull; Fuente: Wikimedia Commons (CC BY-SA 4.0)</div>
-          </div>
-          <div class="volcano-body">
-            <h3>Volcán Arenal (Alajuela)</h3>
-            <span class="scientific">Estratovolcán cónico &bull; 1,670 msnm &bull; Cuenca Hidroeléctrica</span>
-            <p><strong>Morfología perfecta:</strong> Su cono casi geométrico surgió hace unos 7,000 años. Tras su ciclo
-              activo histórico, hoy se monitorea como laboratorio vivo y polo ecoturístico termal.</p>
-            <p><strong>Aporte hídrico:</strong> Sus laderas alimentan el embalse del Lago Arenal, pieza angular que
-              genera más del 17% de la energía hidroeléctrica limpia de Costa Rica.</p>
-            <div class="stats-pill">Laboratorio Vulcanológico en Tiempo Real</div>
+      <!-- CABECERA: INFOGRAFÍA OFICIAL DE LIVANA (DOCX) -->
+      <div class="livana-hero-box">
+        <div class="livana-img-wrap">
+          <img src="images/docx/image18.jpeg" alt="Infografía Oficial: 5 Datos Curiosos de Costa Rica por Livana">
+        </div>
+        <div class="livana-hero-text">
+          <div class="livana-badge">REPORTE ESPECIAL DE INVESTIGACIÓN ESCOLAR</div>
+          <h3>5. DATOS CURIOSOS DE COSTA RICA (LIVANA)</h3>
+          <p class="livana-quote">
+            “¡Muy buenas tardes! Bienvenidos a mi segmento en <strong>PURA VIDA NOTICIAS</strong>. Hoy les traigo cinco
+            datos
+            asombrosos que demuestran por qué Costa Rica es un ejemplo mundial para el cuidado del medio ambiente, la
+            paz
+            democrática y el bienestar de las personas. ¡Descubramos juntos cada uno de estos cinco pilares!”
+          </p>
+          <div class="livana-meta">
+            Investigación y Presentación: <strong>Livana Cárdenas</strong> &bull; <em>Colegio Británico Santa Cruz</em>
           </div>
         </div>
-
-        <!-- 2. VOLCÁN POÁS -->
-        <div class="volcano-card">
-          <div class="volcano-photo-box">
-            <img src="images/volcan_poas.jpg"
-              alt="Cráter principal y laguna ácida del Volcán Poás (2,708 msnm), Cordillera Central">
-            <div class="volcano-photo-credit">Foto: Peter Andersen &bull; Fuente: Wikimedia Commons</div>
-          </div>
-          <div class="volcano-body">
-            <h3>Volcán Poás (Cordillera Central)</h3>
-            <span class="scientific">Cráter gigante activo &bull; 2,708 msnm &bull; Laguna Hiperácida</span>
-            <p><strong>Cráter colosal:</strong> Alberga una de las calderas abiertas más anchas del planeta (1.32 km).
-              Su laguna sulfurosa de color turquesa cambiante presenta un pH ácido extremo (&lt; 1).</p>
-            <p><strong>Análogo espacial:</strong> Científicos de la NASA y la UCR analizan sus bacterias extremófilas
-              para descifrar posibles vestigios de vida temprana en el Marte volcánico.</p>
-            <div class="stats-pill">Uno de los Cráteres más Grandes del Mundo</div>
-          </div>
-        </div>
-
-        <!-- 3. VOLCÁN IRAZÚ -->
-        <div class="volcano-card">
-          <div class="volcano-photo-box">
-            <img src="images/volcan_irazu.jpg"
-              alt="Cráter principal del Volcán Irazú (3,432 msnm), cumbre volcánica de Cartago, Costa Rica">
-            <div class="volcano-photo-credit">Foto: Mario Roberto Durán &bull; Wikimedia Commons</div>
-          </div>
-          <div class="volcano-body">
-            <h3>Volcán Irazú (Cartago)</h3>
-            <span class="scientific">El Coloso de Altura &bull; 3,432 msnm &bull; Mirador Bioceánico</span>
-            <p><strong>Cumbre de dos mares:</strong> Es el volcán más elevado del territorio. En amaneceres diáfanos, su
-              cima permite contemplar simultáneamente el Mar Caribe y el Océano Pacífico.</p>
-            <p><strong>Fertilidad andisol:</strong> Sus lluvias históricas de cenizas fertilizaron el Valle de Cartago
-              con minerales preciosos, conformando el granero agrícola de hortalizas del país.</p>
-            <div class="stats-pill">Cúspide Volcánica Nacional &bull; Vista Bioceánica</div>
-          </div>
-        </div>
-
-        <!-- 4. RINCÓN DE LA VIEJA -->
-        <div class="volcano-card">
-          <div class="volcano-photo-box">
-            <img src="images/volcan_rincon_fumarolas.jpg"
-              alt="Fumarolas y pailas geotérmicas en el Volcán Rincón de la Vieja (1,916 msnm), Guanacaste">
-            <div class="volcano-photo-credit">Foto: Tim Ross &bull; Fuente: Wikimedia Commons</div>
-          </div>
-          <div class="volcano-body">
-            <h3>Rincón de la Vieja (Guanacaste)</h3>
-            <span class="scientific">Caldera Hidrotermal &bull; 1,916 msnm &bull; Fumarolas Activas</span>
-            <p><strong>Caldera viva:</strong> Despliega el complejo hidrotermal más vigoroso del país: pailas de barro
-              hirviente, solfataras y respiraderos de vapor que brotan directamente del suelo selvático.</p>
-            <p><strong>Pilar geotérmico:</strong> En sus faldas operan las plantas Las Pailas y Borinquen del ICE,
-              transformando el calor subterráneo en energía firme las 24 horas sin emitir carbono.</p>
-            <div class="stats-pill">Pilar de la Energía Renovable Nacional</div>
-          </div>
-        </div>
-
       </div>
-      <br>
-      <!-- INFOGRAFÍA GEOTÉRMICA: MODELO DE CIRCUITO CERRADO -->
-      <div class="geothermal-card">
-        <div class="geothermal-header">
-          <div class="geothermal-title">¿CÓMO FUNCIONA EL CICLO GEOTÉRMICO DE CIRCUITO CERRADO?</div>
+
+      <!-- DESARROLLO EXTENDIDO DE LOS 5 DATOS CURIOSOS -->
+      <div class="curiosity-list">
+        <!-- DATO 1 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>1. Casi el 6% de la Biodiversidad del Planeta Tierra</h3>
+            </div>
+            <span class="curiosity-badge">Ecosistemas Tropicales & SINAC</span>
+          </div>
+          <p>
+            A pesar de ocupar apenas el 0,03% de la superficie continental del planeta (51.100 km²), Costa Rica
+            resguarda cerca de <strong>500.000 especies biológicas</strong>, lo que representa aproximadamente el
+            <strong>5,8% de la biodiversidad mundial</strong>. En sus densos bosques tropicales nubosos y litorales
+            conviven más de 900 especies de aves (como el quetzal resplandeciente y el tucán pico iris), 250 clases de
+            mamíferos (monos carablanca, perezosos de dos y tres dedos, jaguares y tapires), miles de mariposas y
+            anfibios emblemáticos como la rana arbórea de ojos rojos. Más del <strong>26% de su territorio
+              nacional</strong> se encuentra permanentemente protegido bajo el Sistema Nacional de Áreas de Conservación
+            (SINAC).
+          </p>
+          <div class="curiosity-impact">
+            Densidad Biológica Mundial: Concentra más de 10 especies registradas por cada kilómetro cuadrado de selva
+            protegida.
+          </div>
         </div>
-        <p class="geothermal-lead">
-          A diferencia del gas o carbón, la geotermia aprovecha el calor volcánico profundo para generar electricidad
-          firme 24/7 sin combustión ni chimeneas contaminantes, operando en un circuito 100% cerrado y renovable:
-        </p>
-        <div class="geothermal-steps">
-          <div class="geothermal-step">
-            <div class="step-tag"><span class="step-num">1</span> RESERVORIO</div>
-            <strong>Calor Magmático</strong>
-            <p>El magma a 2,000 m sobrecalienta acuíferos confinados a temperaturas de 240&deg;C a 300&deg;C.</p>
+
+        <!-- DATO 2 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>2. Una República de Paz: Sin Ejército Militar desde 1948</h3>
+            </div>
+            <span class="curiosity-badge">Educación & Salud Universal</span>
           </div>
-          <div class="geothermal-step">
-            <div class="step-tag"><span class="step-num">2</span> POZO PRODUCTOR</div>
-            <strong>Vapor a Presión</strong>
-            <p>El fluido asciende por tuberías selladas hacia separadores ciclónicos que aíslan el vapor puro.</p>
+          <p>
+            El 1 de diciembre de 1948, tras concluir la guerra civil, el presidente José Figueres Ferrer derribó a
+            mazazos un muro del Cuartel Bellavista (hoy Museo Nacional) y <strong>abolió formalmente las fuerzas armadas
+              permanentes</strong>, decisión histórica ratificada en el artículo 12 de la Constitución de 1949. Los
+            recursos económicos que antes se destinaban a tanques, armamento pesado y cuarteles fueron transferidos
+            íntegramente a financiar la <strong>educación pública gratuita</strong> y el sistema de salud universal de
+            la Caja Costarricense de Seguro Social (CCSS). Costa Rica demostró que la verdadera seguridad ciudadana
+            reside en las aulas escolares y los hospitales.
+          </p>
+          <div class="curiosity-impact">
+            Inversión Cívica: Asignación presupuestaria histórica y constitucional que supera el 8% del PIB nacional
+            para educación pública.
           </div>
-          <div class="geothermal-step">
-            <div class="step-tag"><span class="step-num">3</span> PLANTA ICE</div>
-            <strong>Turbina & Red</strong>
-            <p>La fuerza del vapor mueve turbogeneradores produciendo electricidad limpia inyectada al Sistema Nacional.
-            </p>
+        </div>
+
+        <!-- DATO 3 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>3. Matriz Eléctrica Sostenible: Más del 98% de Energía Limpia</h3>
+            </div>
+            <span class="curiosity-badge">Energías Renovables & ICE</span>
           </div>
-          <div class="geothermal-step">
-            <div class="step-tag"><span class="step-num">4</span> REINYECCIÓN</div>
-            <strong>Circuito Perpetuo</strong>
-            <p>El vapor condensado en líquido se reinyecta al subsuelo mediante pozos profundos, recargando el manto.
-            </p>
+          <p>
+            Durante más de nueve años consecutivos, Costa Rica ha generado entre el <strong>98% y el 99,9% de toda su
+              electricidad</strong> utilizando fuentes limpias y renovables. Esta vanguardia de ingeniería ecológica
+            combina la fuerza del agua en centrales hidroeléctricas fluviales (cerca del 73%), el aprovechamiento del
+            calor subterráneo de los volcanes mediante <strong>energía geotérmica de circuito cerrado</strong> (14%), la
+            potencia de parques eólicos en las cordilleras (12%) y la radiación solar. Este modelo ejemplar sitúa a la
+            nación en la vanguardia del Plan Nacional de Descarbonización rumbo a una economía con cero emisiones netas.
+          </p>
+          <div class="curiosity-impact">
+            Soberanía Verde: Cero dependencia estructural de hidrocarburos para el suministro continuo de su red
+            eléctrica nacional.
+          </div>
+        </div>
+
+        <!-- DATO 4 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>4. Privilegio Geográfico: Costas y Santuarios en Dos Océanos</h3>
+            </div>
+            <span class="curiosity-badge">Litoral Pacífico & Mar Caribe</span>
+          </div>
+          <p>
+            Gracias a su condición de puente ístmico interoceánico, el país posee 1.228 km de litorales bañados por dos
+            grandes masas de agua: el <strong>Océano Pacífico al Oeste</strong> (con extensas penínsulas, rompientes
+            para el surf y el Parque Nacional Corcovado) y el <strong>Mar Caribe al Este</strong> (con canales naturales
+            navegables en Tortuguero, manglares y arrecifes de coral en Cahuita). Además, gracias a la emblemática
+            <strong>Isla del Coco</strong> —Patrimonio Natural de la Humanidad UNESCO—, su territorio marino protegido
+            alcanza más de 574.000 km², superando por más de diez veces toda su superficie continental.
+          </p>
+          <div class="curiosity-impact">
+            Dimensión Marina: Su territorio oceánico protegido multiplica por más de diez veces la extensión terrestre
+            del país.
+          </div>
+        </div>
+
+        <!-- DATO 5 -->
+        <div class="curiosity-card">
+          <div class="curiosity-header">
+            <div class="curiosity-title-group">
+              <h3>5. Bienestar Humano: Uno de los Países Más Felices del Mundo</h3>
+            </div>
+            <span class="curiosity-badge">Pura Vida & Zona Azul de Nicoya</span>
+          </div>
+          <p>
+            Costa Rica se ubica constantemente en los primeros lugares globales del <em>Happy Planet Index</em> (HPI) y
+            es el país más feliz de América Latina según el Informe Mundial de la Felicidad de la ONU. Este bienestar se
+            sustenta en la paz civil, acceso equitativo al agua potable y la filosofía del <strong>“¡Pura
+              vida!”</strong>, que promueve la gratitud, el optimismo y la solidaridad cotidiana. Asimismo, la
+            <strong>Península de Nicoya</strong> es una de las únicas cinco "Zonas Azules" del planeta, donde una
+            notable proporción de habitantes supera los 100 años con vitalidad física, gracias a su dieta saludable,
+            agua rica en calcio y sólidos lazos comunitarios.
+          </p>
+          <div class="curiosity-impact">
+            Zona Azul Mundial: Población centenaria activa con una de las tasas de longevidad saludable más altas del
+            globo terráqueo.
           </div>
         </div>
       </div>
@@ -1820,158 +2522,118 @@
     </div>
   </section>
 
-  <!-- ==================== PÁGINA 4: PLAYAS Y MARES ==================== -->
+  <!-- ==================== PÁGINA 4: CULTURA, SÍMBOLOS & GASTRONOMÍA ==================== -->
   <section class="page">
     <div class="page-header">
-      <span class="highlight">Sección: Biología Marina & Litorales</span>
+      <span class="highlight">Sección: Símbolos Patrios, Folclore & Música</span>
       <span>PURA VIDA &bull; Pág. 4</span>
     </div>
 
     <div class="content-area">
-      <div class="section-header">
-        <h2>DONDE EL BOSQUE BESA EL OCÉANO: 1,290 KILÓMETROS DE COSTA PROTEGIDA</h2>
+      <div class="section-header" style="text-align: center;">
+        <h2>SÍMBOLOS PATRIOS, FOLCLORE Y EL SABOR DE LA TIERRA TICA</h2>
       </div>
-      <p class="dropcap no-indent">
-        Pocos lugares en el globo terráqueo albergan un encuentro tan íntimo entre la selva pluvial y las olas marinas.
-        Los litorales costarricenses, divididos entre el Caribe y el Pacífico, constituyen guarderías esenciales para
-        especies marinas en peligro crítico de extinción y barreras naturales protectoras frente al cambio climático.
+
+      <p class="dropcap no-indent" style="font-size:8.2pt; line-height:1.35; margin-bottom:8px;">
+        Seguimos con nuestra programación de <strong>PURA VIDA NOTICIAS</strong> y toca darle paso a nuestra
+        corresponsal
+        Rafaela, quien nos habla sobre los símbolos patrios y nacionales, sus trajes típicos y el folclor de la hermosa
+        Costa Rica, completando con las comidas típicas más queridas por su pueblo.
       </p>
-      <div class="card-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 7px;">
 
-        <!-- 1. PARQUE NACIONAL TORTUGUERO -->
-        <div class="marine-card">
-          <div class="marine-photo-box">
-            <img src="images/marina_tortuguero_canales.jpg"
-              alt="Canales fluviales y selva tropical del Parque Nacional Tortuguero, Caribe Norte de Costa Rica">
-            <div class="marine-photo-credit">Foto: Leyo &bull; Fuente: Wikimedia Commons (CC BY-SA 2.5)</div>
+      <!-- FILA SUPERIOR: SÍMBOLOS PATRIOS Y TRAJE TÍPICO -->
+      <div class="grid-2col" style="margin-bottom:8px;">
+        <!-- COLUMNA 1: SÍMBOLOS PATRIOS Y NACIONALES -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:155px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image15.jpeg" alt="Símbolos Patrios y Nacionales de Costa Rica"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
           </div>
-          <div class="marine-body">
-            <h3>Parque Nacional Tortuguero</h3>
-            <span class="scientific">El "Amazonas" del Caribe Norte &bull; Canales Fluviales</span>
-            <p><strong>Santuario del desove:</strong> Es el enclave de anidación más relevante de todo el hemisferio
-              occidental para la tortuga verde (<em>Chelonia mydas</em>). De julio a octubre, miles de hembras retornan
-              con precisión milimétrica a su playa natal.</p>
-            <p><strong>Laberinto biológico:</strong> Su red de lagunas y caños navegables comunica la selva costera con
-              el mar, albergando manatíes, jaguares y caimanes en un ecosistema sin carreteras terrestres.</p>
-            <div class="stats-pill">Santuario Mundial de Tortugas &bull; Red Fluvial</div>
-          </div>
-        </div>
-
-        <!-- 2. PARQUE NACIONAL MANUEL ANTONIO -->
-        <div class="marine-card">
-          <div class="marine-photo-box">
-            <img src="images/marina_manuel_antonio2.jpg"
-              alt="Playas vírgenes, tómbolo y selva del Parque Nacional Manuel Antonio, Pacífico Central">
-            <div class="marine-photo-credit">Foto: Bgag &bull; Fuente: Wikimedia Commons (CC0)</div>
-          </div>
-          <div class="marine-body">
-            <h3>Parque Nacional Manuel Antonio</h3>
-            <span class="scientific">Pacífico Central &bull; Biodiversidad Costera & Tómbolo</span>
-            <p><strong>Encuentro selva-mar:</strong> Famoso por sus ensenadas de arena blanca y su tómbolo arenoso en
-              Punta Catedral. Monos tití cariblancos (<em>Saimiri oerstedii</em>) e iguanas transitan ramas sobre la
-              marea alta.</p>
-            <p><strong>Arrecife y educación:</strong> Sus calas protegidas albergan arrecifes coralinos someros y
-              senderos pedagógicos que muestran cómo el ecoturismo regulado financia la conservación a perpetuidad.</p>
-            <div class="stats-pill">Calas Vírgenes &bull; Corredor Costero Neotropical</div>
-          </div>
-        </div>
-
-        <!-- 3. PARQUE NACIONAL ISLA DEL COCO -->
-        <div class="marine-card">
-          <div class="marine-photo-box">
-            <img src="images/marina_tiburon_martillo.jpg"
-              alt="Tiburón martillo (Sphyrna lewini) en el Parque Nacional Isla del Coco, Océano Pacífico de Costa Rica">
-            <div class="marine-photo-credit">Foto: Barry Peters &bull; Fuente: Wikimedia Commons (CC BY 2.0)</div>
-          </div>
-          <div class="marine-body">
-            <h3>Parque Nacional Isla del Coco</h3>
-            <span class="scientific">Patrimonio Mundial UNESCO &bull; Biodiversidad Pelágica</span>
-            <p><strong>Capital del tiburón martillo:</strong> Ubicada a 550 km de la costa continental, esta cumbre
-              submarina acoge congregaciones masivas de tiburón martillo cornudo (<em>Sphyrna lewini</em>), mantas
-              gigantes y delfines.</p>
-            <p><strong>Estación oceánica nodal:</strong> Es el corazón del Corredor Marino del Pacífico Este Tropical
-              (CMAR), permitiendo que peces pelágicos y tortugas laúd migren a salvo de flotas pesqueras industriales.
-            </p>
-            <div class="stats-pill">Patrimonio Mundial UNESCO &bull; Santuario Pelágico</div>
-          </div>
-        </div>
-
-        <!-- 4. MANGLARES DE TÉRRABA-SIERPE -->
-        <div class="marine-card">
-          <div class="marine-photo-box">
-            <img src="images/marina_terraba_sierpe.jpg"
-              alt="Humedal y canales de manglar de Térraba-Sierpe, Sitio Ramsar en el Pacífico Sur de Costa Rica">
-            <div class="marine-photo-credit">Foto: Haakon S. Krohn &bull; Fuente: Wikimedia Commons (CC BY 3.0)</div>
-          </div>
-          <div class="marine-body">
-            <h3>Manglares de Térraba-Sierpe</h3>
-            <span class="scientific">Sitio Ramsar Internacional &bull; 27,000 Hectáreas</span>
-            <p><strong>Cuna marina y filtro:</strong> El manglar más extenso de Centroamérica. Sus raíces sumergidas
-              zancudas protegen bancos de alevines, moluscos y peces comerciales antes de nadar a mar abierto.</p>
-            <p><strong>Baluarte de carbono azul:</strong> Secuestra hasta cinco veces más carbono por hectárea que los
-              bosques terrestres maduros y neutraliza la fuerza destructiva de marejadas y temporales oceánicos.</p>
-            <div class="stats-pill">Sitio Ramsar &bull; Gigante de Carbono Azul</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- INFOGRAFÍA MARINA: CONECTIVIDAD OCEÁNICA Y CARBONO AZUL -->
-      <!-- INFOGRAFÍA MARINA: CONECTIVIDAD OCEÁNICA Y CARBONO AZUL -->
-      <!--
-      <div class="marine-infobox">
-        <div class="marine-infobox-header">
-          <div class="marine-infobox-title">CORREDOR MARINO DEL PACÍFICO (CMAR) & META 30x30</div>
-        </div>
-        <p class="marine-infobox-lead">
-          Costa Rica conecta sus aguas con el Corredor Marino del Pacífico Este Tropical (CMAR), resguardando
-          autopistas biológicas submarinas y blindando manglares milenarios de la pesca destructiva:
-        </p>
-        <div class="marine-steps">
-          <div class="marine-step">
-            <div class="step-tag"><span class="step-num">1</span> NODO OCEÁNICO</div>
-            <strong>Isla del Coco (CR)</strong>
-            <p>Santuario insular donde se congregan cardúmenes de tiburones martillo y cetáceos en alta mar.</p>
-          </div>
-          <div class="marine-step">
-            <div class="step-tag"><span class="step-num">2</span> AUTOPISTA CMAR</div>
-            <strong>Conexión Submarina</strong>
-            <p>Enlace biológico que conecta Costa Rica con Galápagos (Ecuador), Malpelo (Colombia) y Coiba (Panamá).</p>
-          </div>
-          <div class="marine-step">
-            <div class="step-tag"><span class="step-num">3</span> CARBONO AZUL</div>
-            <strong>Filtro de Manglares</strong>
-            <p>Los manglares de Térraba-Sierpe atrapan sedimentos y almacenan carbono orgánico en su fango profundo.</p>
-          </div>
-          <div class="marine-step">
-            <div class="step-tag"><span class="step-num">4</span> META 30x30</div>
-            <strong>Compromiso Global</strong>
-            <p>El país resguarda casi un tercio de su mar patrimonial bajo categorías de no-extracción pesquera.</p>
-          </div>
-        </div>
-      </div>
-      -->
-      <br>
-      <div class="grid-2col" style="margin-top: 2px;">
-        <div class="col">
-          <h3 style="font-family:'Cinzel', serif; font-size:9pt; color:var(--primary); margin-bottom:2px;">
-            Arrecifes Coralinos: Selvas Submarinas
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.1 & 4.2 Símbolos Patrios y Nacionales (Rafaela)
           </h3>
-          <p style="font-size:7.4pt; line-height:1.28;">
-            Los arrecifes de Cahuita y Golfo Dulce albergan más del 25% de la biodiversidad marina. Mediante viveros
-            comunitarios, biólogos del SINAC cultivan fragmentos de coral para regenerar barreras dañadas por el cambio
-            térmico.
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Bandera (1848):</strong> Inspirada en Francia. <em>Azul</em> (el cielo protector), <em>Blanco</em>
+            (la paz y sabiduría) y <em>Rojo</em> (energía, valentía y trabajo por la libertad).
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Escudo e Himno:</strong> Escudo (1848/1998) con volcanes, dos océanos y barcos. Himno Nacional
+            (1852/1903): canto a la paz y al trabajo sin ensalzar la guerra.
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0;">
+            <strong>Emblemas:</strong> Guaria morada (1939, unión familiar), Árbol de Guanacaste (1959, fortaleza y
+            Anexión de Nicoya), Ave Yigüirro (1977, anuncio de lluvias) y la Carreta típica (1988, Patrimonio UNESCO
+            2005).
           </p>
         </div>
-        <div class="col">
-          <h3 style="font-family:'Cinzel', serif; font-size:9pt; color:var(--primary); margin-bottom:2px;">
-            Ciencia Ciudadana y Desove Comunitario
+
+        <!-- COLUMNA 2: TRAJE TÍPICO -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:155px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image16.jpeg" alt="Traje Típico Tradicional de Costa Rica"
+              style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.3 Traje Típico Tradicional de Costa Rica
           </h3>
-          <p style="font-size:7.4pt; line-height:1.28;">
-            En Tortuguero y Ostional, guardaparques y escolares patrullan las arribadas nocturnas de tortugas baula y
-            verde.
-            La educación ambiental transformó el saqueo de nidos en un modelo de monitoreo científico y ecoturismo
-            regenerativo.
+          <p style="font-size:7.2pt; line-height:1.28; margin-bottom:3px; text-indent:0;">
+            <strong>Traje de la Mujer:</strong> Blusa o cotona blanca con finos encajes y vuelos; <em>enagua</em> amplia
+            y muy colorida decorada con cintas en tonos vivos (rojo, azul y blanco); faja roja en la cintura, cinta
+            negra al cuello con medalla y trenzas con flores naturales de guaria morada.
+          </p>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0;">
+            <strong>Traje del Hombre:</strong> Camisa blanca o de manta con botones al frente; pantalón de dril o
+            mezclilla; pañuelo rojo o azul anudado al cuello, faja en la cintura y el tradicional sombrero de paja
+            campesino o <em>chonete</em> blanco, orgullo del labrador tico.
+          </p>
+        </div>
+      </div>
+
+      <!-- FILA INFERIOR: MÚSICA Y COMIDAS TÍPICAS -->
+      <div class="grid-2col">
+        <!-- COLUMNA 1: LA MARIMBA -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:135px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image17.jpeg" alt="La Marimba: Instrumento característico del folclor nacional"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            4.4 Instrumento Musical: La Marimba
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0; color:var(--dark-text);">
+            Por medio de ella los costarricenses se identifican como miembros de una comunidad como lo es Guanacaste,
+            cuna del folclor auténtico. La marimba es el instrumento más importante del país: a su alrededor gira la
+            actividad cultural, artística y tradicional en cada festividad patria.
+          </p>
+        </div>
+
+        <!-- COLUMNA 2: COMIDAS TÍPICAS -->
+        <div class="col"
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px;">
+          <div
+            style="width:100%; height:135px; border-radius:3px; overflow:hidden; border:1px solid #E5E5E5; margin-bottom:6px;">
+            <img src="images/docx/image19.jpeg"
+              alt="Comida Típica de Costa Rica: Gallo Pinto, Casado y Sopa de Mondongo"
+              style="width:100%; height:100%; object-fit:contain; background:#FAF8F2; display:block;">
+          </div>
+          <h3
+            style="font-family:'Cinzel', serif; font-size:8.8pt; font-weight:800; color:var(--primary); margin-bottom:3px;">
+            5.1 Comidas Típicas de Costa Rica
+          </h3>
+          <p style="font-size:7.2pt; line-height:1.28; margin:0; text-indent:0; color:var(--dark-text);">
+            <strong>Gallo pinto:</strong> Arroz y frijoles mezclados y salteados, con huevo, plátano y aguacate
+            (desayuno insigne). <strong>Casado:</strong> Plato tradicional completo con arroz, frijoles, carne, ensalada
+            y plátano maduro. <strong>Sopa de mondongo:</strong> Caldo nutritivo y reconfortante con verduras y especias
+            criollas.
           </p>
         </div>
       </div>
@@ -1984,156 +2646,213 @@
     </div>
   </section>
 
-  <!-- ==================== PÁGINA 5: CATIE Y CENTROS DE INVESTIGACIÓN ==================== -->
+  <!-- ==================== PÁGINA 5: CUADRO COMPARATIVO COSTA RICA - BOLIVIA ==================== -->
   <section class="page">
     <div class="page-header">
-      <span class="highlight">Sección: Investigación Científica & Academia</span>
+      <span class="highlight">Sección: Estudio Comparativo Bilateral</span>
       <span>PURA VIDA &bull; Pág. 5</span>
     </div>
 
     <div class="content-area">
-      <div class="section-header">
-        <h2>CIENCIA PARA LA TIERRA: EL CATIE Y LOS CENTROS DE INVESTIGACIÓN</h2>
+      <div class="section-header" style="text-align: center;">
+        <h2>COSTA RICA Y BOLIVIA: POLÍTICA, GEOGRAFÍA Y ECONOMÍA FRENTE A FRENTE</h2>
       </div>
 
       <p class="dropcap no-indent">
-        La conservación de la naturaleza no significa levantar un muro infranqueable para alejar al ser humano, sino
-        investigar cómo producir alimentos nutritivos sin degradar los suelos. En esta misión, Costa Rica ha brindado al
-        mundo instituciones científicas que lideran la transición ecológica en las Américas.
+        Hoy tenemos a nuestra compañera Keila en <strong>PURA VIDA NOTICIAS</strong>, quien nos presenta un exhaustivo
+        análisis comparativo entre Costa Rica y Bolivia en cuanto a su división política, geografía, cultura, economía y
+        biodiversidad, ilustrado con los recursos visuales oficiales de nuestra investigación escolar.
       </p>
 
-      <div class="card-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 7px;">
+      <!-- 6. CUADRO DE COMPARACIÓN COSTA RICA CON BOLIVIA (KEILA) - 8 PARES DE IMÁGENES -->
+      <div class="comparison-grid">
 
-        <!-- 1. CAMPUS CIENTÍFICO CATIE -->
-        <div class="science-card">
-          <div class="science-photo-box">
-            <img src="images/catie_sede_turrialba.jpg"
-              alt="Campus principal y lago del CATIE en Turrialba, Cartago, Costa Rica">
-            <div class="science-photo-credit">Foto: CATIE Comunicación &bull; Wikimedia Commons (CC BY-SA 3.0)</div>
+        <!-- 1. DIVISIÓN POLÍTICA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>1. División Política</span>
+            <span style="color:var(--accent-dark);">7 Provincias vs 9 Departamentos</span>
           </div>
-          <div class="science-body">
-            <h3>Campus Científico CATIE (Turrialba)</h3>
-            <span class="scientific">Organismo Internacional de Posgrado &bull; Fundado en 1973</span>
-            <p><strong>Alianza educación-tierra:</strong> Con sede en Cartago, combina investigación agronómica con
-              maestría y doctorado. Ha graduado a más de 2,800 líderes ambientales de América Latina, incluyendo
-              profesionales bolivianos.</p>
-            <p><strong>Desarrollo regenerativo:</strong> Sus campos experimentales demuestran que la rentabilidad de las
-              familias campesinas coexiste plenamente con la biodiversidad y la captura de carbono.</p>
-            <div class="stats-pill">Pilar Académico Neotropical &bull; Sede Turrialba</div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image20.gif" alt="7 Provincias de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>7 Provincias</strong> (San José, Alajuela, Cartago, Heredia, Guanacaste,
+                Puntarenas, Limón)</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image21.jpeg" alt="9 Departamentos de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>9 Departamentos</strong> (La Paz, Santa Cruz, Cbba, Oruro, Potosí, Chuquisaca,
+                Tarija, Beni, Pando)</p>
+            </div>
           </div>
         </div>
 
-        <!-- 2. COLECCIÓN VIVA DE GERMPLASMA -->
-        <div class="science-card">
-          <div class="science-photo-box">
-            <img src="images/catie_cacao_germoplasma.jpg"
-              alt="Mazorcas maduras en el Banco Internacional de Germoplasma de Cacao en el CATIE">
-            <div class="science-photo-credit">Foto: Lcesacom / CATIE &bull; Wikimedia Commons (CC BY-SA 3.0)</div>
+        <!-- 2. CAPITAL CONSTITUCIONAL -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>2. Capital Constitucional</span>
+            <span style="color:var(--accent-dark);">San José vs Sucre</span>
           </div>
-          <div class="science-body">
-            <h3>Colección Viva de Cacao y Café</h3>
-            <span class="scientific">Germoplasma Global &bull; Theobroma cacao &amp; Coffea arabica</span>
-            <p><strong>Reserva genética mundial:</strong> Custodia más de 1,200 clones de cacao y una de las colecciones
-              vivas de café silvestre más ricas del planeta, resguardando genes resistentes a plagas y sequías.</p>
-            <p><strong>Seguridad alimentaria:</strong> Ante la crisis climática, sus científicos reproducen y
-              distribuyen variedades tolerantes que prosperan sin necesidad de agroquímicos sintéticos destructivos.</p>
-            <div class="stats-pill">Banco de Genes Vivo &bull; Seguridad Alimentaria</div>
-          </div>
-        </div>
-
-        <!-- 3. AGROFORESTERÍA SOSTENIBLE -->
-        <div class="science-card">
-          <div class="science-photo-box">
-            <img src="images/agroforesteria_cafe_tarrazu.jpg"
-              alt="Finca cafetalera con árboles de sombra nativos en laderas montañosas de Costa Rica">
-            <div class="science-photo-credit">Foto: Wikimedia Commons (Dominio Público)</div>
-          </div>
-          <div class="science-body">
-            <h3>Café y Cacao Bajo Sombra Forestal</h3>
-            <span class="scientific">Agroecología Tropical &bull; Estratificación Vegetal</span>
-            <p><strong>Cultivo con dosel protector:</strong> La agroforestería integra árboles maderables nativos (como
-              laurel y poró) sobre cafetales. La hojarasca fertiliza el suelo y reduce la evaporación del agua.</p>
-            <p><strong>Refugio de polinizadores:</strong> Este dosel provee corredores biológicos para aves migratorias
-              e insectos benéficos, erradicando la necesidad de talar selvas para cultivar.</p>
-            <div class="stats-pill">Modelo Agroforestal &bull; Café con Sombra Nativa</div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image22.jpeg" alt="San José, Capital de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>San José:</strong> Capital nacional, sede de los tres poderes del Estado y centro
+                financiero.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image23.jpeg" alt="Sucre, Capital Histórica de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Sucre:</strong> Capital Histórica y Constitucional (con La Paz como sede de
+                gobierno).</p>
+            </div>
           </div>
         </div>
 
-        <!-- 4. ESTACIÓN BIOLÓGICA LA SELVA -->
-        <div class="science-card">
-          <div class="science-photo-box">
-            <img src="images/oet_estacion_la_selva.jpg"
-              alt="Dosel de bosque tropical lluvioso en la Estación Biológica La Selva (OET), Sarapiquí">
-            <div class="science-photo-credit">Foto: Felineora / OET &bull; Wikimedia Commons (CC BY-SA 3.0)</div>
+        <!-- 3. IDIOMA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>3. Idioma Oficial</span>
+            <span style="color:var(--accent-dark);">Español & Diversidad Lingüística</span>
           </div>
-          <div class="science-body">
-            <h3>Estación Biológica La Selva (OET)</h3>
-            <span class="scientific">Sarapiquí &bull; Laboratorio Neotropical en Selva Lluviosa</span>
-            <p><strong>Epicentro de investigación:</strong> Administrada por la Organización para Estudios Tropicales,
-              genera más de 100 publicaciones científicas al año sobre dinámica del carbono, dosel y botánica selvática.
-            </p>
-            <p><strong>Formación de campo:</strong> Más de 250 universidades mundiales envían anualmente investigadores
-              a sus senderos, consolidando a Costa Rica como la gran aula ecológica del planeta.</p>
-            <div class="stats-pill">Laboratorio Abierto &bull; Más de 200 Científicos/Año</div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image24.jpeg" alt="Idioma en Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>Español:</strong> Idioma oficial, complementado con lenguas indígenas como bribri y
+                cabécar.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image25.jpeg" alt="Idioma en Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Plurilingüe:</strong> Castellano y 36 idiomas oficiales originarios (quechua,
+                aymara, guaraní).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MONEDA SOBERANA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>4. Moneda Soberana</span>
+            <span style="color:var(--accent-dark);">Colón (CRC) vs Boliviano (BOB)</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image26.jpeg" alt="Moneda de Costa Rica: Colón">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>Colón (₡ CRC):</strong> Billetes ilustrados con flora, fauna y ecosistemas
+                protegidos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image27.jpeg" alt="Moneda de Bolivia: Boliviano">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>Boliviano (Bs BOB):</strong> Moneda soberana con próceres, patrimonio histórico y
+                biodiversidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. EXTENSIÓN TERRITORIAL -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>5. Extensión Territorial</span>
+            <span style="color:var(--accent-dark);">51.100 km² vs 1.098.581 km²</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image28.jpeg" alt="Extensión Territorial de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val"><strong>51.100 km²:</strong> Puente ístmico compacto con altísima densidad biológica por
+                kilómetro cuadrado.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image29.jpeg" alt="Extensión Territorial de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val"><strong>1.098.581 km²:</strong> 21,5 veces mayor que Costa Rica, abarcando Andes, Chaco y
+                Amazonía.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. FAUNA REPRESENTATIVA -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>6. Fauna Representativa</span>
+            <span style="color:var(--accent-dark);">Especies Tropicales & Andinas</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image30.jpeg" alt="Fauna de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Perezosos, tucanes pico iris, monos carablanca, quetzales y ranas arborícolas de ojos
+                rojos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image31.jpeg" alt="Fauna de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Cóndores andinos, llamas, osos jucumari (de anteojos), capibaras y bufeos rosados de río.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. ATRACTIVOS TURÍSTICOS -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>7. Atractivos Turísticos</span>
+            <span style="color:var(--accent-dark);">Destinos Emblemáticos</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image32.jpeg" alt="Atractivos Turísticos de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Parque Manuel Antonio, Volcán Arenal, canales de Tortuguero y playas del Pacífico y Caribe.
+              </p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image33.jpeg" alt="Atractivos Turísticos de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Salar de Uyuni, Lago Titicaca, Parque Madidi, Tiwanaku y las Misiones de Chiquitos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. EXPORTACIONES -->
+        <div class="comparison-item-card">
+          <div class="comparison-item-title">
+            <span>8. Exportaciones Principales</span>
+            <span style="color:var(--accent-dark);">Producción & Comercio Exterior</span>
+          </div>
+          <div class="comparison-duo">
+            <div class="comparison-col-side">
+              <img src="images/docx/image34.jpeg" alt="Exportaciones de Costa Rica">
+              <span class="label">🇨🇷 Costa Rica</span>
+              <p class="val">Dispositivos médicos de alta tecnología, café gourmet, banano, piña y servicios
+                ecoturísticos.</p>
+            </div>
+            <div class="comparison-col-side">
+              <img src="images/docx/image35.jpeg" alt="Exportaciones de Bolivia">
+              <span class="label">🇧🇴 Bolivia</span>
+              <p class="val">Gas natural, minerales (litio, zinc, estaño), productos agroindustriales (soya, quinua) y
+                manufacturas.</p>
+            </div>
           </div>
         </div>
 
       </div>
-      <br>
-      <!-- INFOGRAFÍA AGROFORESTAL: EL MODELO DE 4 NIVELES DEL CATIE -->
-      <div class="science-infobox">
-        <div class="science-infobox-header">
-          <div class="science-infobox-title">EL MODELO AGROFORESTAL REGENERATIVO DEL CATIE</div>
-        </div>
-        <p class="science-infobox-lead">
-          El CATIE diseñó un modelo de producción estratificada en 4 niveles que permite cosechar alimentos de alto
-          valor
-          mientras restaura cuencas hidrográficas y captura carbono:
-        </p>
-        <div class="science-steps">
-          <div class="science-step">
-            <div class="step-tag"><span class="step-num">1</span> DOSEL SUPERIOR</div>
-            <strong>Árboles Maderables</strong>
-            <p>Especies nativas (cedro, laurel) que capturan carbono y amortiguan la fuerza de lluvias tropicales.</p>
-          </div>
-          <div class="science-step">
-            <div class="step-tag"><span class="step-num">2</span> ESTRATO MEDIO</div>
-            <strong>Café y Cacao</strong>
-            <p>Arbustos productivos que maduran bajo sombra fresca desarrollando aroma y cuerpo superior.</p>
-          </div>
-          <div class="science-step">
-            <div class="step-tag"><span class="step-num">3</span> SUELO VIVO</div>
-            <strong>Cobertura Orgánica</strong>
-            <p>Leguminosas y hojarasca que fijan nitrógeno natural y nutren la microbiota del suelo sin agroquímicos.
-            </p>
-          </div>
-          <div class="science-step">
-            <div class="step-tag"><span class="step-num">4</span> CUENCAS VIVAS</div>
-            <strong>Agua Protegida</strong>
-            <p>Riberas reforestadas que filtran sedimentos y blindan nacientes de agua pura para las comunidades.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="grid-2col" style="margin-top: 2px;">
-        <div class="col">
-          <h3 style="font-family:'Cinzel', serif; font-size:9pt; color:var(--primary); margin-bottom:2px;">
-            Red SINAC: Descentralización Comunitaria
-          </h3>
-          <p style="font-size:7.4pt; line-height:1.28;">
-            El Sistema Nacional de Áreas de Conservación divide el país en 11 regiones donde guardaparques y familias
-            rurales custodian reservas biológicas. Este esquema convirtió a antiguos cazadores en guías naturalistas y
-            protectores de la fauna.
-          </p>
-        </div>
-        <div class="col">
-          <h3 style="font-family:'Cinzel', serif; font-size:9pt; color:var(--primary); margin-bottom:2px;">
-            Cooperación Científica Latinoamericana
-          </h3>
-          <p style="font-size:7.4pt; line-height:1.28;">
-            Mediante becas internacionales, el CATIE forma agrónomos e ingenieros forestales de Bolivia y la región.
-            Al retornar a sus naciones, estos profesionales replican modelos de cuencas sostenibles y agricultura
-            regenerativa adaptada a sus propios valles y selvas.
+      <!-- BANNER DE COSTO DE VIDA (DATO DOCX DE KEILA) -->
+      <div class="cost-living-banner">
+        <span style="flex-shrink:0; font-size:14pt;" aria-hidden="true">💡</span>
+        <div class="cost-living-banner-content">
+          <strong class="cost-living-title">DATO CLAVE DE KEILA: COSTO DE VIDA COMPARATIVO</strong>
+          <p>
+            El costo de vida en <strong>La Paz (Bolivia)</strong> es un <strong>68% más accesible</strong> que en
+            <strong>San José (Costa Rica)</strong>, un indicador que refleja la diversidad socioeconómica de América
+            Latina y resalta el valor del intercambio educativo entre nuestras juventudes.
           </p>
         </div>
       </div>
@@ -2146,142 +2865,112 @@
     </div>
   </section>
 
-  <!-- ==================== PÁGINA 6: CONCIENCIA VERDE & RECURSOS ==================== -->
+  <!-- ==================== PÁGINA 6: FAUNA COMPARTIDA, PASAPORTE & CIERRE ==================== -->
   <section class="page">
     <div class="page-header">
-      <span class="highlight">Sección: Educación Ambiental & Compromiso</span>
+      <span class="highlight">Sección: Fauna Compartida & Pasaporte Ecológico</span>
       <span>PURA VIDA &bull; Pág. 6</span>
     </div>
 
     <div class="content-area">
-      <div class="section-header" style="text-align: center">
-        <h2>DE COSTA RICA A BOLIVIA: ¿CÓMO ACTUAMOS HOY?</h2>
+      <div class="section-header" style="text-align: center;">
+        <h2>HERMANDAD BIOLÓGICA Y TU PASAPORTE DE VIAJERO PURA VIDA</h2>
       </div>
 
       <p class="dropcap no-indent">
-        Aprender sobre la biodiversidad de Costa Rica cobra auténtico sentido cuando ese conocimiento se traduce en
-        hábitos concretos dentro de nuestras aulas, pasillos y hogares en Bolivia. Bolivia también es un país
-        megadiverso —con su Amazonía, sus Yungas y su Chiquitanía— que demanda la misma entrega ética de sus
-        estudiantes.
+        Y de esta manera es como ya vamos llegando a la parte final de nuestra programación con <strong>PURA VIDA
+          NOTICIAS</strong>.
+        Para ello, está en exteriores nuestro colega de trabajo Farid, quien nos habla sobre la biodiversidad de la
+        fauna
+        existente en ambos países y concluye con la dinámica pedagógica del pasaporte escolar.
       </p>
 
-      <div class="decalogo-list">
-        <div class="decalogo-item">
-          <div class="decalogo-num">1</div>
-          <div class="decalogo-text">
-            <h3>Cero Plásticos de un Solo Uso</h3>
-            <p>Utiliza botellas térmicas y fiambreras lavables. Di "no" a pajillas y bolsas descartables en meriendas.
-            </p>
+      <!-- 7. FAUNA DE COSTA RICA Y BOLIVIA (FARID) - DOS GRANDES INFOGRAFÍAS NATIVAS -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 6px;">
+        <div
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px; display:flex; flex-direction:column;">
+          <div style="width:100%; height:118px; border-radius:3px; overflow:hidden; margin-bottom:4px;">
+            <img src="images/docx/image36.jpeg"
+              alt="Fauna de Costa Rica y Bolivia: Dos países, una increíble biodiversidad"
+              style="width:100%; height:100%; object-fit:cover; display:block; border-radius:3px;">
           </div>
+          <strong
+            style="font-family:'Work Sans', sans-serif; font-size:6.8pt; color:var(--primary); margin-bottom:2px;">
+            Fauna de Costa Rica &bull; Bosques Tropicales y Costas
+          </strong>
+          <p style="font-size:6.3pt; line-height:1.2; margin:0; text-indent:0; color:var(--dark-text);">
+            Costa Rica acoge al perezoso de tres dedos, tucán pico iris, mono carablanca, rana arborícola de ojos rojos,
+            tortuga marina verde y quetzal resplandeciente en un territorio compacto.
+          </p>
         </div>
 
-        <div class="decalogo-item">
-          <div class="decalogo-num">2</div>
-          <div class="decalogo-text">
-            <h3>Separación Limpia de Residuos</h3>
-            <p>Deposita papel, cartón limpio, latas y plásticos secos en los contenedores escolares correspondientes.
-            </p>
+        <div
+          style="background:white; border:1px solid var(--border-card); border-radius:4px; padding:8px 10px; display:flex; flex-direction:column;">
+          <div style="width:100%; height:118px; border-radius:3px; overflow:hidden; margin-bottom:4px;">
+            <img src="images/docx/image37.jpeg" alt="Animales que viven en ambos países: Jaguar, Puma, Tapir, Caimán"
+              style="width:100%; height:100%; object-fit:cover; display:block; border-radius:3px;">
           </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">3</div>
-          <div class="decalogo-text">
-            <h3>Compostaje y Huertos Escolares</h3>
-            <p>Inspirados en el CATIE, transformemos cáscaras de fruta de refrigerios en tierra fértil para el colegio.
-            </p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">4</div>
-          <div class="decalogo-text">
-            <h3>Custodia Estricta del Agua</h3>
-            <p>Cierra el grifo mientras te jabonas las manos en los sanitarios del colegio y reporta fugas de agua.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">5</div>
-          <div class="decalogo-text">
-            <h3>Eficiencia Energética en el Aula</h3>
-            <p>Aprovecha la luz solar abriendo cortinas; apaga luces y proyectores al salir a los descansos.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">6</div>
-          <div class="decalogo-text">
-            <h3>Protección a los Polinizadores</h3>
-            <p>Respeta y no espantes a las abejas, mariposas y colibríes que visitan las flores de nuestros patios.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">7</div>
-          <div class="decalogo-text">
-            <h3>Arborización con Especies Nativas</h3>
-            <p>Promovamos sembrar árboles autóctonos (como queñuas y kiswaras) que capturen carbono en las ciudades.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">8</div>
-          <div class="decalogo-text">
-            <h3>Cuidado de Materiales Escolares</h3>
-            <p>Cuida tus cuadernos, uniformes y libros escolares para darles la mayor vida útil posible.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">9</div>
-          <div class="decalogo-text">
-            <h3>Lectura y Verificación Científica</h3>
-            <p>Investiga en fuentes verídicas y huye de bulos o noticias falsas sobre el medio ambiente.</p>
-          </div>
-        </div>
-
-        <div class="decalogo-item">
-          <div class="decalogo-num">10</div>
-          <div class="decalogo-text">
-            <h3>Multiplicar el Mensaje en Familia</h3>
-            <p>Comparte estos hábitos con tus padres y amigos: cuidar el planeta es una tarea cotidiana.</p>
-          </div>
+          <strong
+            style="font-family:'Work Sans', sans-serif; font-size:6.8pt; color:var(--primary); margin-bottom:2px;">
+            Animales Que Viven en Ambos Países &bull; Especies Puente
+          </strong>
+          <p style="font-size:6.3pt; line-height:1.2; margin:0; text-indent:0; color:var(--dark-text);">
+            El <strong>jaguar</strong>, el <strong>puma</strong>, el <strong>tapir</strong> y el <strong>caimán</strong>
+            habitan tanto en Costa Rica como en Bolivia, demostrando que la naturaleza no reconoce fronteras humanas.
+          </p>
         </div>
       </div>
 
-      <!-- PARALELO ECOLÓGICO COSTA RICA - BOLIVIA -->
-      <div class="parallel-action-container">
-        <div class="parallel-action-header">
-          <span class="parallel-action-title">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-            HERMANDAD ECOLÓGICA: DOS NACIONES, UNA SOLA MISIÓN PLANETARIA
-          </span>
-          <span class="parallel-tag">Solidaridad Neotropical</span>
+      <!-- CITA DE FARID -->
+      <div
+        style="background:#F2F7F4; border-left:3px solid var(--primary); padding:6px 10px; margin-bottom:6px; font-style:italic; font-size:6.8pt; line-height:1.26; color:var(--primary);">
+        “Costa Rica y Bolivia tienen muchos animales increíbles. En Costa Rica encontramos perezosos, tucanes y ranas de
+        ojos rojos; en Bolivia tenemos llamas, cóndores y osos jucumaris. Pero también compartimos animales como el
+        jaguar, el puma y el tapir. ¡Los dos países tienen una naturaleza maravillosa que debemos proteger!” &bull;
+        <strong>Farid Romero</strong>
+      </div>
+
+      <!-- 8. PASAPORTE ESCOLAR (FARID) -->
+      <div
+        style="background:#FAF8F2; border:1.5px dashed var(--primary-light); border-radius:4px; padding:8px 10px; display:flex; gap:10px; align-items:center; margin-bottom:6px;">
+        <div style="flex:0 0 100px; border-radius:3px; overflow:hidden; border:1px solid #C4B9A7;">
+          <img src="images/docx/image38.png" alt="Pasaporte Costa Rica: Explorador Ecológico Feria Escolar"
+            style="width:100%; height:auto; display:block;">
         </div>
-        <div class="parallel-grid">
-          <div class="parallel-card">
-            <h4>Costa Rica &bull; Vanguardia de Restauración</h4>
-            <p>
-              Con solo <strong>51.100 km²</strong>, alberga el <strong>5% de la biodiversidad del planeta</strong>.
-              Protege más del <strong>28% de su territorio</strong> bajo el SINAC, opera con un <strong>98% de
-                electricidad renovable</strong> y lidera la ciencia agroforestal desde el <strong>CATIE</strong>,
-              demostrando que la naturaleza es motor de bienestar social.
-            </p>
+        <div style="flex:1;">
+          <div style="display:flex; align-items:center; gap:5px; margin-bottom:2px;">
+            <span style="font-size:11pt;" aria-hidden="true">🛂</span>
+            <h3 style="font-family:'Cinzel', serif; font-size:8.4pt; font-weight:800; color:var(--primary); margin:0;">
+              8. PASAPORTE: EXPLORADOR ECOLÓGICO PURA VIDA (FARID)
+            </h3>
           </div>
-          <div class="parallel-card">
-            <h4>Bolivia &bull; Gigante Megadiverso del Sur</h4>
-            <p>
-              Con <strong>1.098.581 km²</strong>, figura entre los 15 países más ricos en vida biológica del orbe.
-              Reservas insignes como el <strong>Madidi</strong> y <strong>Noel Kempff Mercado</strong> sustentan la
-              Amazonía y los Andes. Aplicar en nuestras escuelas el compostaje y la reforestación nativa es el puente
-              para defender este legado.
-            </p>
+          <p style="font-size:6.8pt; line-height:1.24; margin:0 0 4px 0; text-indent:0; color:var(--dark-text);">
+            “Es un documento que sirve para acreditar la identidad y nacionalidad de una persona, fuera de su país.” En
+            nuestra feria escolar, este pasaporte certifica tu misión: <strong>¡cuidar el planeta y proteger la
+              biodiversidad!</strong>
+          </p>
+          <div
+            style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; background:rgba(255,255,255,0.7); border:1px solid #D5E5DC; border-radius:4px; padding:8px 6px;">
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 1</div>
+              <div style="font-size:9pt; line-height:1.2;">🌋</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Volcanes (Poás)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 2</div>
+              <div style="font-size:9pt; line-height:1.2;">🦥</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Animales (Perezoso)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 3</div>
+              <div style="font-size:9pt; line-height:1.2;">🏖️</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Playas (Dos Mares)</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:5.5pt; font-weight:800; color:var(--primary); letter-spacing:0.5px;">SELLO 4</div>
+              <div style="font-size:9pt; line-height:1.2;">🌳</div>
+              <div style="font-size:5.2pt; font-weight:700; color:var(--dark-text);">Bosques (Selva)</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2295,56 +2984,53 @@
             <line x1="2" y1="12" x2="22" y2="12" />
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
           </svg>
-          Bases Científicas del Periódico:
+          Bases de Información y Fuentes Oficiales para Investigación:
         </div>
         <div class="resources-grid">
           <div class="resource-card">
             <h3>1. CATIE Oficial</h3>
-            <p>Agroforestería, posgrados y conservación de germoplasma vivo.</p>
+            <p>Investigación agroforestal, café y cacao.</p>
             <a href="https://www.catie.ac.cr" target="_blank" rel="noopener noreferrer"
-              aria-label="Portal oficial de investigación agroforestal del CATIE (abre en pestaña nueva)">catie.ac.cr
-            </a>
+              aria-label="Portal oficial de investigación agroforestal del CATIE">catie.ac.cr</a>
           </div>
 
           <div class="resource-card">
             <h3>2. SINAC Costa Rica</h3>
-            <p>Mapas oficiales de parques nacionales y áreas de conservación.</p>
+            <p>Parques nacionales y conservación de vida silvestre.</p>
             <a href="https://www.sinac.go.cr" target="_blank" rel="noopener noreferrer"
-              aria-label="Directorio oficial de parques y reservas del SINAC (abre en pestaña nueva)">sinac.go.cr
-              &rarr;</a>
+              aria-label="Directorio oficial de parques y reservas del SINAC">sinac.go.cr &rarr;</a>
           </div>
 
           <div class="resource-card">
             <h3>3. UNESCO Biosfera</h3>
-            <p>Reservas de la biosfera de La Amistad y Cordillera Central.</p>
+            <p>Patrimonio Mundial y reservas de biosfera.</p>
             <a href="https://www.unesco.org" target="_blank" rel="noopener noreferrer"
-              aria-label="Reservas de la Biosfera de la UNESCO en Costa Rica (abre en pestaña nueva)">unesco.org
-            </a>
+              aria-label="Reservas de la Biosfera de la UNESCO en Costa Rica">unesco.org</a>
           </div>
 
           <div class="resource-card">
             <h3>4. MINAE Costa Rica</h3>
-            <p>Políticas de biodiversidad y descarbonización nacional.</p>
+            <p>Políticas de ambiente, energía renovable y paz.</p>
             <a href="https://www.minae.go.cr" target="_blank" rel="noopener noreferrer"
-              aria-label="Plan de descarbonización del Ministerio de Ambiente y Energía de Costa Rica (abre en pestaña nueva)">minae.go.cr
-            </a>
+              aria-label="Ministerio de Ambiente y Energía de Costa Rica">minae.go.cr</a>
           </div>
         </div>
       </div>
 
-      <!-- COLOFÓN EDITORIAL Y CIERRE INSTITUCIONAL -->
+      <!-- COLOFÓN EDITORIAL Y CIERRE DEL NOTICIERO -->
       <div class="colophon-container">
         <div class="colophon-header">
-          <span class="colophon-title">FESTIVAL ESCOLAR &bull; EDITORIAL 2026</span>
-          <span class="colophon-date">03 de Noviembre de 2026</span>
+          <span class="colophon-title">PURA VIDA NOTICIAS &bull; CIERRE DE TRANSMISIÓN 2026</span>
+          <span class="colophon-date">Santa Cruz, Noviembre 2026</span>
         </div>
         <p class="colophon-quote">
-          &ldquo;La educación ambiental no consiste en enseñar datos fríos, sino en encender la devoción por la vida.
-          Cada árbol cuidado en Bolivia y cada cuenca protegida en Costa Rica forman el mismo latido continental.&rdquo;
+          “Esto fue nuestra presentación de PURA VIDA NOTICIAS. ¡Gracias por acompañarnos, hasta una nueva oportunidad,
+          tengan todos, muy buenas tardes!”
         </p>
         <div class="colophon-credits">
-          <span style="flex: 1.2;"><strong>Fuentes Oficiales:</strong> CATIE &bull; SINAC &bull; UNESCO &bull;
-            MINAE</span>
+          <span style="flex: 1.2;"><strong>Producción Escolar:</strong> Colegio Británico Santa Cruz &bull; Feria de
+            Ciencias</span>
+          <span style="text-align: right;">¡Pura Vida! </span>
         </div>
       </div>
 
